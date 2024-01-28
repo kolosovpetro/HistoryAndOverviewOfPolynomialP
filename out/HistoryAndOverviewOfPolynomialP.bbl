@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{kolosov2016link}
+Petro Kolosov.
+\newblock {On the link between binomial theorem and discrete convolution}.
+\newblock {\em arXiv preprint arXiv:1603.02468}, 2016.
+\newblock \url{https://arxiv.org/abs/1603.02468}.
+
 \bibitem{beardon1996sums}
 Alan~F Beardon.
 \newblock {Sums of powers of integers}.
