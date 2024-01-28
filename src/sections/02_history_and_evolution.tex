@@ -83,7 +83,7 @@ It is immediately seen that~\eqref{eq:cube_identity} holds looking to the table 
         6     & 1 & 31 & 49 & 55 & 49 & 31 & 1  &   \\
         7     & 1 & 37 & 61 & 73 & 73 & 61 & 37 & 1
     \end{tabular}
-    \caption{Values of 6k(n-k) + 1. See the OEIS entry: \href{https://oeis.org/A287326}{\texttt{A287326}}~\cite{kolosov2017third}.}
+    \caption{Values of $6k(n-k) + 1$. See the OEIS entry: \href{https://oeis.org/A287326}{\texttt{A287326}}~\cite{kolosov2017third}.}
     \label{tab:fig_1}
 \end{table}
 Therefore, we have reached our base case, the case $n^3$.
@@ -93,7 +93,7 @@ for polynmial $n^3$ is it true that it can be generalized, say for $n^4$ or $n^5
 And that was my next question, however without any expectation of the form of generalized relation.
 Soon enough my idea was caught by other people.
 In 2018, Albert Tkaczyk has published two of his works~\cite{tkaczyk2018problem, tkaczyk2018continuation}
-showing the cases for polynomials $n^5$ and $n^7$.
+showing the cases for polynomials $n^5, \; n^7$ and $n^9$.
 In short, it appeared that relation~\eqref{eq:cube_identity} could be generalized
 for any odd-power solving certain system of linear equations.
 It was proposed that case for $n^5$ has explicit form as
@@ -106,7 +106,7 @@ so that we reach the form of compact double sum
 \begin{equation*}
     n^5 = \sum_{k=1}^{n} \sum_{r=0}^{2} \coeffA{2}{r} k^r (n-k)^r
 \end{equation*}
-Now the potential form of odd-power identity becomes more obvious.
+Now the potential form generalized of odd-power identity becomes more obvious.
 To evaluate the coefficients $\coeffA{2}{0}, \coeffA{2}{1}, \coeffA{2}{2}$
 we construct the system of linear equations.
 In its explicit form
@@ -126,7 +126,7 @@ Multiplying by $30$ right-hand side and left-hand side, we get
 \begin{equation*}
     30 \coeffA{2}{0} n + 5 \coeffA{2}{1} (-n + n^3) + \coeffA{2}{2} (-n + n^5) - 30n^5 = 0
 \end{equation*}
-Opening brackets and rearranging the terms gives
+Expanding the brackets and rearranging the terms gives
 \begin{equation*}
     30 \coeffA{2}{0} - 5 \coeffA{2}{1} n + 5 \coeffA{2}{1} n^3 - \coeffA{2}{2} n + \coeffA{2}{2} n^5 - 30n^5 = 0
 \end{equation*}
@@ -163,7 +163,8 @@ all odd-powers by constructing and solving certain system of linear equations, a
 \begin{equation*}
     n^{2m+1} = \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} (n-k)^{r}
 \end{equation*}
-In more details, it is discussed separately in~\cite{kolosov2022106}.
+where $\coeffA{m}{r}$ are real coefficients.
+In more details, it is discussed separately in~\cite{kolosov2022106, kolosov2023polynomial}.
 However, constructing and solving systems of linear equations each time for every odd-power $2m+1$ requires huge effort,
 there must be a function that generates the set of real coefficients $\coeffA{m}{r}$, I thought.
 As it turned out, that assumption was correct.
@@ -323,5 +324,15 @@ For example,
 The coefficients $\coeffA{m}{r}$ are also registered in the OEIS~\cite{kolosov2018numerator,kolosov2018denominator}.
 It is as well interesting to notice that row sums of the $\coeffA{m}{r}$ give powers of $2$
 \begin{equation*}
-    \sum_{r=0}^{m} \coeffA{m}{r} = 2^{2m+1}
+    \sum_{r=0}^{m} \coeffA{m}{r} = 2^{2m+1} - 1
 \end{equation*}
+Therefore, we have successfully shown and generalized previously obtained equation~\eqref{eq:cube_identity}
+\begin{thm}
+    For every $n\geq 1, \; n,m\in\mathbb{N}$ there are $\coeffA{m}{0}, \coeffA{m}{1},\dots,\coeffA{m}{m}$,
+    such that
+    \begin{equation*}
+        n^{2m+1} = \sum_{k=1}^{n}\sum_{r=0}^{m} \coeffA{m}{r} k^r (n-k)^r
+        \label{eq:theorem}
+    \end{equation*}
+    where $\coeffA{m}{r}$ is a real coefficient defined recursively by~\eqref{eq:definition_coefficient_a}.
+\end{thm}

@@ -34,7 +34,7 @@ A[n_, k_] := (2k + 1) * Binomial[2k, k] * Sum[A[n, j] * Binomial[j, 2k + 1] * (-
 A[n_, k_] := (2n + 1) * Binomial[2n, n] /; k == n;
 
 L[m_, n_, k_] := Sum[A[m, r] * k^r * (n - k)^r, {r, 0, m}];
-P[m_, n_, b_] := Sum[L[m, n, k], {k, 0, b - 1}];
+P[m_, n_, b_] := Sum[L[m, n, k], {k, 0, b-1}];
 
 sigma[x_] := Global`q * x ^ Global`j;
 
