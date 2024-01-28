@@ -1,0 +1,68 @@
+Back than, in 2016 I remember myself playing with finite differences of polynomial $n^3$ over the domain of natural
+numbers $n\in\mathbb{N}$ and first very naive question that came to my mind was \textit{Is it possible to assemble the value of
+    $n^3$ backwards having finite differences?}
+Definitely, answer to this question is \textit{Yes} and has been well-developed in between 1674--1684
+by Issac Newton's fundamental work on the topic that is nowadays known as foundation of classical interpolation theory.
+That time, in 2016, due to lack of knowledge and perspective of view I started re-inventing the interpolation formula by myself,
+fueled by purest interest and sense of mystery.
+All mathematical laws and relations exist till the very beginning, but we only find and describe them,
+I was inspired by that mindset and started my own journey.
+So let's begin considering the table of finite differences of the polynomial $n^3$
+\begin{table}[H]
+    \begin{center}
+        \setlength\extrarowheight{-6pt}
+        \begin{tabular}{c|cccc}
+            $n$ & $n^3$ & $\Delta(n^3)$ & $\Delta^2(n^3)$ & $\Delta^3(n^3)$ \\
+            \hline
+            0   & 0     & 1             & 6               & 6               \\
+            1   & 1     & 7             & 12              & 6               \\
+            2   & 8     & 19            & 18              & 6               \\
+            3   & 27    & 37            & 24              & 6               \\
+            4   & 64    & 61            & 30              & 6               \\
+            5   & 125   & 91            & 36              &                 \\
+            6   & 216   & 127           &                 &                 \\
+            7   & 343   &               &                 &
+        \end{tabular}
+    \end{center}
+    \caption{Table of finite differences of the polynomial $n^3$.} \label{tab:table}
+\end{table}
+First and foremost, we can observe that finite difference $\Delta(n^3)$ of the polynomial $n^3$
+can be expressed via summation over $n$, e.g
+\begin{align}
+    \label{eq:cubes_interpolation}
+    \begin{split}
+        \Delta(0^3) &= 1+6 \cdot 0 \\
+        \Delta(1^3) &= 1+6\cdot0+6\cdot1 \\
+        \Delta(2^3) &= 1+6\cdot0+6\cdot1+6\cdot2 \\
+        \Delta(3^3) &= 1+6\cdot0+6\cdot1+6\cdot2+6\cdot3 \\
+        &\; \; \vdots \\
+        \Delta(n^3) &= 1+6\cdot0+6\cdot1+6\cdot2+6\cdot3+\cdots+6\cdot n = 1 + 6 \sum_{k=0}^{n} k
+    \end{split}
+\end{align}
+The one experienced mathematician would immediately notice a spot to apply Faulhaber's formula to expand the term
+$\sum_{k=0}^{n} k$ reaching expected result that matches Binomial theorem, so that
+\begin{equation*}
+    \sum_{k=0}^{n} k = \frac{1}{2}(n+n^2)
+\end{equation*}
+Then ours above relation $\Delta(n^3) = 1+6\cdot0+6\cdot1+6\cdot2+6\cdot3+\cdots+6\cdot n = 1 + 6 \sum_{k=0}^{n} k$
+immediately terms into Binomial expansion
+\begin{equation}
+    \Delta(n^3) = (n+1)^3 - n^3 = 1 + 6 \left[ \frac{1}{2}(n+n^2) \right] = 1 + 3 n + 3 n^2 = \sum_{k=0}^{2} \binom{3}{k} n^k
+    \label{eq:cubes-difference-binomial-theorem}
+\end{equation}
+However, as it said, I was not experienced mathematician back than, so that it terned out for me a little different perspective.
+Not following the convenient solution~\eqref{eq:cubes-difference-binomial-theorem},
+I rearranged the finite differences from table~\eqref{tab:table} explicitly to get
+\begin{align*}
+    n^3 &= [1+6\cdot0]+[1+6\cdot0+6\cdot1]+[1+6\cdot0+6\cdot1+6\cdot2]+\cdots \\
+    &+[1+6\cdot0+6\cdot1+6\cdot2+\cdots+6\cdot(n-1)]
+\end{align*}
+And then combined under the summation in terms of $(n-k)$
+\[
+    n^3 = n +(n-0) \cdot6 \cdot0 + (n-1)\cdot6\cdot1 + (n-2)\cdot6\cdot2 + \cdots+1\cdot6\cdot(n-1)
+\]
+Therefore, the polynomial $n^3$ can be considered as follows
+\begin{equation}
+    \label{eq:cube_identity}
+    n^3 = \sum_{k=1}^{n} 6k(n-k) + 1
+\end{equation}

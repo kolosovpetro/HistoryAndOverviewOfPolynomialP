@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-BeginPackage["GithubLatexTemplateMathematicaPackage`"]
+BeginPackage["HistoryAndOverviewOfPolynomialP`"]
 
 A::usage= "A[n, k] returns the real coefficient A of non-negative integers n, k such that n <= k. 
 See https://kolosovpetro.github.io/pdf/AStudyOnDynamicEquations.pdf."
@@ -53,4 +53,7 @@ theorem[m_] := Expand[timeScaleDerivativeX[m, Global`x, sigma[Global`x]] + timeS
 End[ ]
 
 EndPackage[ ]
+
+
+
 
