@@ -1,3 +1,72 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{beardon1996sums}
+Alan~F Beardon.
+\newblock {Sums of powers of integers}.
+\newblock {\em {The American mathematical monthly}}, 103(3):201--213, 1996.
+
+\bibitem{abramowitz1988handbook}
+Milton Abramowitz, Irene~A Stegun, and Robert~H Romer.
+\newblock Handbook of mathematical functions with formulas, graphs, and
+  mathematical tables, 1988.
+
+\bibitem{kolosov2017third}
+Petro Kolosov.
+\newblock {Numerical triangle, row sums give third power, Entry A287326 in The
+  On-Line Encyclopedia of Integer Sequences}.
+\newblock Published electronically at \url{https://oeis.org/A287326}, 2017.
+
+\bibitem{tkaczyk2018problem}
+{Tkaczyk, Albert}.
+\newblock {About the problem of a triangle developing the polynomial function}.
+\newblock Published electronically at
+  \href{https://www.linkedin.com/pulse/problem-triangle-developing-polynomial-function-fn-nm-albert-tkaczyk/}{\texttt{LinkedIn}},
+  2018.
+
+\bibitem{tkaczyk2018continuation}
+{Tkaczyk, Albert}.
+\newblock {On the problem of a triangle developing the polynomial function -
+  continuation}.
+\newblock Published electronically at
+  \href{https://www.linkedin.com/pulse/problem-triangle-developing-polynomial-function-f-n-m-albert-tkaczyk/}{\texttt{LinkedIn}},
+  2018.
+
+\bibitem{kolosov2018fifth}
+Petro Kolosov.
+\newblock {Numerical triangle, row sums give fifth power, Entry A300656 in The
+  On-Line Encyclopedia of Integer Sequences}.
+\newblock Published electronically at \url{https://oeis.org/A300656}, 2018.
+
+\bibitem{kolosov2022106}
+{Kolosov, Petro}.
+\newblock {106.37 An unusual identity for odd-powers}.
+\newblock {\em {The Mathematical Gazette}}, 106(567):509--513, 2022.
+
+\bibitem{alekseyev2018mathoverflow}
+{Alekseyev, Max}.
+\newblock {MathOverflow answer 297916/113033}.
+\newblock Published electronically at
+  \url{https://mathoverflow.net/a/297916/113033}, 2018.
+
+\bibitem{scheuer2023mathstackexchange}
+{Scheuer, Markus}.
+\newblock {MathStackExchange answer 4724343/463487}.
+\newblock Published electronically at
+  \url{https://math.stackexchange.com/a/4724343/463487}, 2023.
+
+\bibitem{bateman1953higher}
+Harry Bateman.
+\newblock {\em {Higher transcendental functions [volumes i-iii]}}, volume~1.
+\newblock McGRAW-HILL book company, 1953.
+
+\bibitem{kolosov2018numerator}
+Petro Kolosov.
+\newblock {Entry A302971 in The On-Line Encyclopedia of Integer Sequences}.
+\newblock Published electronically at \url{https://oeis.org/A302971}, 2018.
+
+\bibitem{kolosov2018denominator}
+Petro Kolosov.
+\newblock {Entry A304042 in The On-Line Encyclopedia of Integer Sequences}.
+\newblock Published electronically at \url{https://oeis.org/A304042}, 2018.
 
 \end{thebibliography}
