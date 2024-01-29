@@ -1,7 +1,10 @@
-Back than, in 2016 I remember myself playing with finite differences of polynomial $n^3$ over the domain of natural
-numbers $n\in\mathbb{N}$ and first very naive question that came to my mind was \textit{Is it possible to assemble the value of
+Back than, in 2016 being a student of faculty of mechanical engineering,
+I remember myself playing with finite differences of polynomial $n^3$ over the domain of natural numbers $n\in\mathbb{N}$.
+Looking to the values in difference table,
+the first and very naive question that came to my mind was \textit{Is it possible to assemble the value of
     $n^3$ backwards having finite differences?}
-Definitely, answer to this question is \textit{Yes} and has been well-developed in between 1674--1684
+Definitely, answer to this question is \textit{Yes}.
+Interpolation has been well-developed in between 1674--1684
 by Issac Newton's fundamental work on the topic that is nowadays known as foundation of classical interpolation theory (citations).
 That time, in 2016, due to lack of knowledge and perspective of view I started re-inventing the interpolation formula by myself,
 fueled by purest interest and sense of mystery.
@@ -70,7 +73,7 @@ Therefore, the polynomial $n^3$ can be considered as follows
 \end{equation}
 It is immediately seen that~\eqref{eq:cube_identity} holds looking to the table of its values
 \begin{table}[H]
-    \setlength\extrarowheight{-5pt}
+    \setlength\extrarowheight{-6pt}
     \begin{tabular}{c|cccccccc}
         $n/k$ & 0 & 1  & 2  & 3  & 4  & 5  & 6  & 7 \\
         \hline
@@ -86,15 +89,15 @@ It is immediately seen that~\eqref{eq:cube_identity} holds looking to the table 
     \caption{Values of $6k(n-k) + 1$. See the OEIS entry: \href{https://oeis.org/A287326}{\texttt{A287326}}~\cite{kolosov2017third}.}
     \label{tab:fig_1}
 \end{table}
-Therefore, we have reached our base case, the case $n^3$.
+Therefore, we have reached our base case by successfully interpolating  the polynomial $n^3$.
 Fairly enough that next curiosity would be, for example
 \textit{Well, if we have a relation~\eqref{eq:cube_identity}
-for polynmial $n^3$ is it true that it can be generalized, say for $n^4$ or $n^5$ either?}
-And that was my next question, however without any expectation of the form of generalized relation.
+for polynmial $n^3$ then is it true that~\eqref{eq:cube_identity} can be generalized, say for $n^4$ or $n^5$ either?}
+That was my next question, however without any expectation of the form of generalized relation.
 Soon enough my idea was caught by other people.
 In 2018, Albert Tkaczyk has published two of his works~\cite{tkaczyk2018problem, tkaczyk2018continuation}
 showing the cases for polynomials $n^5, \; n^7$ and $n^9$.
-In short, it appeared that relation~\eqref{eq:cube_identity} could be generalized
+In short, it appears that relation~\eqref{eq:cube_identity} could be generalized
 for any odd-power solving certain system of linear equations.
 It was proposed that case for $n^5$ has explicit form as
 \begin{equation*}
@@ -332,7 +335,20 @@ Therefore, we have successfully shown and generalized previously obtained equati
     such that
     \begin{equation*}
         n^{2m+1} = \sum_{k=1}^{n}\sum_{r=0}^{m} \coeffA{m}{r} k^r (n-k)^r
-        \label{eq:theorem}
+        \label{eq:odd-power-theorem}
     \end{equation*}
     where $\coeffA{m}{r}$ is a real coefficient defined recursively by~\eqref{eq:definition_coefficient_a}.
 \end{thm}
+Theorem~\eqref{eq:odd-power-theorem} can be considered as succeeded interpolation of the polynomial $x^{2m+1}$
+over the domains $n\in\mathbb{R}, \; m\in\mathbb{N}$.
+
+Finally, we got our road to the main definition of polynomial $\polynomialP{m}{b}{x}$
+as it is closely related to the equation~\eqref{eq:odd-power-theorem}.
+So let's define it without further hesitation
+\begin{defn}
+    \begin{equation}
+        \polynomialP{m}{b}{x} = \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r
+        \label{eq:definition_polynomial_p}
+    \end{equation}
+\end{defn}
+where $\coeffA{m}{r}$ are real coefficients~\eqref{eq:definition_coefficient_a}, $m\in\mathbb{N}$ and $(x, b)\in \mathbb{R}$.
