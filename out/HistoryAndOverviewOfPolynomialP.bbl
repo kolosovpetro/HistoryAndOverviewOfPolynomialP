@@ -104,4 +104,29 @@ Albert Tkaczyk.
   f(n)=n\^m}, September 2023.
 \newblock \url{https://doi.org/10.5281/zenodo.8371454}.
 
+\bibitem{kolosov2023another}
+Petro Kolosov.
+\newblock Another approach to get derivative of odd-power.
+\newblock {\em arXiv preprint arXiv:2310.07804}, 2023.
+\newblock \url{https://arxiv.org/abs/2310.07804}.
+
+\bibitem{kolosov2016study}
+Petro Kolosov.
+\newblock A study on partial dynamic equation on time scales involving
+  derivatives of polynomials.
+\newblock {\em arXiv preprint arXiv:1608.00801}, 2016.
+\newblock \url{https://arxiv.org/abs/1608.00801}.
+
+\bibitem{kolosov_2024_10575485}
+Petro Kolosov.
+\newblock {Finding the derivative of polynomials via double limit}, January
+  2024.
+\newblock \url{https://doi.org/10.5281/zenodo.10575485}.
+
+\bibitem{barbero2020two}
+J~Fernando Barbero~G, Juan Margalef-Bentabol, and Eduardo~JS Villase{\~n}or.
+\newblock {A two-sided Faulhaber-like formula involving Bernoulli polynomials}.
+\newblock {\em Comptes Rendus. Math{\'e}matique}, 358(1):41--44, 2020.
+\newblock \url{https://doi.org/10.5802/crmath.10}.
+
 \end{thebibliography}

@@ -1,1 +1,27 @@
-﻿
+﻿In this section let's give a short overview of related works that are based onto definition
+of polynomials $\polynomialP{m}{b}{x}$.
+In~\cite{kolosov2023another} is given a relation in terms of partial differential differential equations such that
+ordinary derivative of odd-power $2m+1$ can be reached in terms of partial derivatives of $\polynomialP{m}{b}{x}$.
+Let be a fixed point $v\in \mathbb{N}$, then ordinary derivative $\frac{d}{dx} g_v (u)$ of the odd-power function $g_v(x) = x^{2v + 1}$
+evaluate in point $u\in\mathbb{R}$ equals to partial derivative $(f_{v})^{'}_{x} (u, u)$ evaluate in point $(u, u)$ plus
+partial derivative $(f_{v})^{'}_{z} (u, u)$ evaluate in point $(u, u)$
+\begin{equation}
+    \frac{d}{dx} g_v (u) = (f_{v})^{'}_{x} (u, u) + (f_{v})^{'}_{z} (u, u)
+    \label{eq:odd-exponential-identity}
+\end{equation}
+where $f_{y} (x, z) = \sum_{k=1}^{z} \sum_{r=0}^{y} \coeffA{y}{r} k^r (x-k)^r = \polynomialP{y}{z}{x}$.
+Afterwards, the equation~\eqref{eq:odd-exponential-identity}
+is generalized over the timescales $\mathbb{T} \times \mathbb{T}$ providing its dynamic equation analog
+in~\cite{kolosov2016study}.
+
+Second article~\cite{kolosov_2024_10575485} gives another perspective of ordinary derivatives of polynomials expressing
+them via double limit as
+\[
+    \lim_{b \to x} \polynomialP{m}{b}{x} = x^{2m+1}
+\]
+that opens such opportunity.
+
+In~\cite{barbero2020two} based on~\eqref{eq:equation7}, the authors give a new identity involving
+Bernoulli polynomials and combinatorial numbers that provides,
+in particular, a Faulhaber-like formula for sums of the form $1^m(n-1)^m + 2^m (n -2)^m + \cdots + (n - 1)^m 1^m$ for
+positive integers $m$ and $n$.
