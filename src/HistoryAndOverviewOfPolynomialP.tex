@@ -51,6 +51,12 @@
 \def\llceil{\left\lceil\kern-3.5pt\left\lceil}
 \def\rrfloor{\right\rfloor\kern-3.5pt\right\rfloor}
 \newcommand \llceilCoefficient [3] {\llceil \nobarfrac{#1}{#2} \rrfloor_{#3}}
+\let\svthefootnote\thefootnote
+\newcommand\freefootnote[1]{%
+    \let\thefootnote\relax%
+    \footnotetext{#1}%
+    \let\thefootnote\svthefootnote%
+}
 
 
 \newtheorem{thm}{Theorem}[section]
@@ -69,18 +75,18 @@
 \email{kolosovp94@gmail.com}
 \urladdr{https://kolosovpetro.github.io}
 \keywords{
-    Keyword1, Keyword2
+    Polynomials, Finite differences, Interpolation, Polynomial identities
 }
-\subjclass[2010]{26E70, 05A30}
+\subjclass[2010]{41-XX, 26E70, 05A30}
 \date{\today}
 \hypersetup{
     pdftitle={History And Overview Of Polynomial P},
     pdfsubject={
-        Your Subject List
+        Polynomials, Finite differences, Interpolation, Polynomial identities, Power sums
     },
     pdfauthor={Petro Kolosov},
     pdfkeywords={
-        Your Keywords list
+        Polynomials, Finite differences, Interpolation, Polynomial identities, Power sums
     }
 }
 \begin{document}
