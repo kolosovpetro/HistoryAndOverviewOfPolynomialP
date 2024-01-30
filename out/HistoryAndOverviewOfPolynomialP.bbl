@@ -1,10 +1,12 @@
 \begin{thebibliography}{10}
 
-\bibitem{kolosov2016link}
-Petro Kolosov.
-\newblock {On the link between binomial theorem and discrete convolution}.
-\newblock {\em arXiv preprint arXiv:1603.02468}, 2016.
-\newblock \url{https://arxiv.org/abs/1603.02468}.
+\bibitem{meijering2002chronology}
+{Meijering, Erik}.
+\newblock {A chronology of interpolation: from ancient astronomy to modern
+  signal and image processing}.
+\newblock {\em {Proceedings of the IEEE}}, 90(3):319--342, 2002.
+\newblock
+  \url{https://infoscience.epfl.ch/record/63085/files/meijering0201.pdf}.
 
 \bibitem{beardon1996sums}
 Alan~F Beardon.
@@ -22,6 +24,18 @@ Petro Kolosov.
   On-Line Encyclopedia of Integer Sequences}.
 \newblock Published electronically at \url{https://oeis.org/A287326}, 2017.
 
+\bibitem{kolosov2018fifth}
+Petro Kolosov.
+\newblock {Numerical triangle, row sums give fifth power, Entry A300656 in The
+  On-Line Encyclopedia of Integer Sequences}.
+\newblock Published electronically at \url{https://oeis.org/A300656}, 2018.
+
+\bibitem{kolosov2018seventh}
+Petro Kolosov.
+\newblock {Numerical triangle, row sums give seventh power, Entry A300785 in
+  The On-Line Encyclopedia of Integer Sequences}.
+\newblock Published electronically at \url{https://oeis.org/A300785}, 2018.
+
 \bibitem{tkaczyk2018problem}
 {Tkaczyk, Albert}.
 \newblock {About the problem of a triangle developing the polynomial function}.
@@ -36,12 +50,6 @@ Petro Kolosov.
 \newblock Published electronically at
   \href{https://www.linkedin.com/pulse/problem-triangle-developing-polynomial-function-f-n-m-albert-tkaczyk/}{\texttt{LinkedIn}},
   2018.
-
-\bibitem{kolosov2018fifth}
-Petro Kolosov.
-\newblock {Numerical triangle, row sums give fifth power, Entry A300656 in The
-  On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A300656}, 2018.
 
 \bibitem{kolosov2022106}
 {Kolosov, Petro}.
@@ -82,5 +90,17 @@ Petro Kolosov.
 Petro Kolosov.
 \newblock {Entry A304042 in The On-Line Encyclopedia of Integer Sequences}.
 \newblock Published electronically at \url{https://oeis.org/A304042}, 2018.
+
+\bibitem{kolosov2016link}
+Petro Kolosov.
+\newblock {On the link between binomial theorem and discrete convolution}.
+\newblock {\em arXiv preprint arXiv:1603.02468}, 2016.
+\newblock \url{https://arxiv.org/abs/1603.02468}.
+
+\bibitem{albert_tkaczyk_2023_8371454}
+Albert Tkaczyk.
+\newblock {On three-dimensional expansions of the polynomial function
+  f(n)=n\^m}, September 2023.
+\newblock https://doi.org/10.5281/zenodo.8371454.
 
 \end{thebibliography}

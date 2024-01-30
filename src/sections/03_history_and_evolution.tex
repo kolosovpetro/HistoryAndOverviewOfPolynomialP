@@ -3,11 +3,13 @@ I remember myself playing with finite differences of polynomial $n^3$ over the d
 Looking to the values in difference table,
 the first and very naive question that came to my mind was \textit{Is it possible to assemble the value of
     $n^3$ backwards having finite differences?}
-Definitely, answer to this question is \textit{Yes}.
+Definitely, answer to this question is \textit{Yes}, via interpolation.
+Interpolation is a method of finding new data points based on the range of a discrete set of known data points.
 Interpolation has been well-developed in between 1674--1684
-by Issac Newton's fundamental work on the topic that is nowadays known as foundation of classical interpolation theory (citations).
-That time, in 2016, due to lack of knowledge and perspective of view I started re-inventing the interpolation formula by myself,
-fueled by purest interest and sense of mystery.
+by Issac Newton's fundamental work on the topic that is nowadays known as foundation of classical interpolation
+theory~\cite{meijering2002chronology}.
+That time, in 2016, due to lack of knowledge and perspective of view I started re-inventing the interpolation
+formula by myself,fueled by purest interest and sense of mystery.
 All mathematical laws and relations exist till the very beginning, but we only find and describe them,
 I was inspired by that mindset and started my own journey.
 So let's begin considering the table of finite differences of the polynomial $n^3$
@@ -86,10 +88,13 @@ It is immediately seen that~\eqref{eq:cube_identity} holds looking to the table 
         6     & 1 & 31 & 49 & 55 & 49 & 31 & 1  &   \\
         7     & 1 & 37 & 61 & 73 & 73 & 61 & 37 & 1
     \end{tabular}
-    \caption{Values of $6k(n-k) + 1$. See the OEIS entry: \href{https://oeis.org/A287326}{\texttt{A287326}}~\cite{kolosov2017third}.}
+    \caption{Values of $6k(n-k) + 1$.
+    See the OEIS entry: \href{https://oeis.org/A287326}{\texttt{A287326}}~\cite{kolosov2017third}.
+    Sequences for $n^{5}$ and $n^7$ polynomials are at~\cite{kolosov2018fifth, kolosov2018seventh}.
+    }
     \label{tab:fig_1}
 \end{table}
-Therefore, we have reached our base case by successfully interpolating  the polynomial $n^3$.
+Therefore, we have reached our base case by successfully interpolating the polynomial $n^3$.
 Fairly enough that next curiosity would be, for example
 \textit{Well, if we have a relation~\eqref{eq:cube_identity}
 for polynmial $n^3$ then is it true that~\eqref{eq:cube_identity} can be generalized, say for $n^4$ or $n^5$ either?}
@@ -352,3 +357,6 @@ So let's define it without further hesitation
     \end{equation}
 \end{defn}
 where $\coeffA{m}{r}$ are real coefficients~\eqref{eq:definition_coefficient_a}, $m\in\mathbb{N}$ and $(x, b)\in \mathbb{R}$.
+A comprehensive discussion on the polynomial $\polynomialP{m}{b}{x}$ and its properties can be found at~\cite{kolosov2016link}.
+In 2023, Albert Tkaczyk yet again extended the theorem~\eqref{eq:odd-power-theorem} to the so-called three dimension case
+so that it gives polynomials of the form $n^{3l+2}$ at~\cite{albert_tkaczyk_2023_8371454}.
