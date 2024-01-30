@@ -55,6 +55,7 @@ Petro Kolosov.
 {Kolosov, Petro}.
 \newblock {106.37 An unusual identity for odd-powers}.
 \newblock {\em {The Mathematical Gazette}}, 106(567):509--513, 2022.
+\newblock \url{https://doi.org/10.1017/mag.2022.129}.
 
 \bibitem{kolosov2023polynomial}
 Petro Kolosov.
@@ -101,6 +102,6 @@ Petro Kolosov.
 Albert Tkaczyk.
 \newblock {On three-dimensional expansions of the polynomial function
   f(n)=n\^m}, September 2023.
-\newblock https://doi.org/10.5281/zenodo.8371454.
+\newblock \url{https://doi.org/10.5281/zenodo.8371454}.
 
 \end{thebibliography}
