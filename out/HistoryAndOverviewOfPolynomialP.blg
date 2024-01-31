@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 32 items.
 Database file #1: HistoryAndOverviewOfPolynomialP.bib
-You've used 21 entries,
+You've used 24 entries,
             1791 wiz_defined-function locations,
-            561 strings with 7623 characters,
-and the built_in function-call counts, 3218 in all, are:
-= -- 288
-> -- 98
+            574 strings with 8088 characters,
+and the built_in function-call counts, 3599 in all, are:
+= -- 318
+> -- 110
 < -- 1
-+ -- 46
-- -- 25
-* -- 110
-:= -- 520
-add.period$ -- 68
-call.type$ -- 21
-change.case$ -- 20
++ -- 52
+- -- 28
+* -- 113
+:= -- 577
+add.period$ -- 77
+call.type$ -- 24
+change.case$ -- 23
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 135
-empty$ -- 390
-format.name$ -- 25
-if$ -- 732
+cite$ -- 24
+duplicate$ -- 150
+empty$ -- 444
+format.name$ -- 28
+if$ -- 822
 int.to.chr$ -- 0
-int.to.str$ -- 21
+int.to.str$ -- 24
 missing$ -- 9
-newline$ -- 113
-num.names$ -- 21
-pop$ -- 94
+newline$ -- 128
+num.names$ -- 24
+pop$ -- 115
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 63
+skip$ -- 72
 stack$ -- 0
 substring$ -- 94
-swap$ -- 22
+swap$ -- 25
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 29
-width$ -- 23
-write$ -- 227
+while$ -- 32
+width$ -- 26
+write$ -- 257

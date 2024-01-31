@@ -129,4 +129,22 @@ J~Fernando Barbero~G, Juan Margalef-Bentabol, and Eduardo~JS Villase{\~n}or.
 \newblock {\em Comptes Rendus. Math{\'e}matique}, 358(1):41--44, 2020.
 \newblock \url{https://doi.org/10.5802/crmath.10}.
 
+\bibitem{kolosov2018coefficientspolynomial1}
+Petro Kolosov.
+\newblock The coefficients u(m, l, k), m = 1 defined by the polynomial
+  identity, 2018.
+\newblock \url{https://oeis.org/A320047}.
+
+\bibitem{kolosov2018coefficientspolynomial2}
+Petro Kolosov.
+\newblock The coefficients u(m, l, k), m = 2 defined by the polynomial
+  identity, 2018.
+\newblock \url{https://oeis.org/A316349}.
+
+\bibitem{kolosov2018coefficientspolynomial3}
+Petro Kolosov.
+\newblock The coefficients u(m, l, k), m = 3 defined by the polynomial
+  identity, 2018.
+\newblock \url{https://oeis.org/A316387}.
+
 \end{thebibliography}
