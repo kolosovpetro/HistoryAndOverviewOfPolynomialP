@@ -1,6 +1,6 @@
 # History and overview of the polynomial $\mathbf{P}^m_b(x)$
 
-Polynomial $\mathbf{P}^m_b(x)$ is a $2m+1, \; m\in\mathbb{N}$ degree polynomial in $(x,b) \in \mathbb{R}$,
+Polynomial $\mathbf{P}^m_b(x)$ is a $2m+1, \quad m\in\mathbb{N}$ degree polynomial in $(x,b) \in \mathbb{R}$,
 such that derived applying certain methods of interpolation, so that initially we reach the base case for $m=1$
 generalizing it up to $m\in\mathbb{N}$ afterwards.
 In particular, the polynomial $\mathbf{P}^m_b(x)$ may be successfully applicable
