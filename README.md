@@ -54,8 +54,8 @@ Plus, it serves as motivation for the maintainers to continue improving and addi
 
 Contributions are welcome! 🎉
 
-It's better to [create an issue](issues) with description of your potential contribution before creating
-pull requests.
+It's better to [create an issue](https://github.com/kolosovpetro/HistoryAndOverviewOfPolynomialP/issues/new)
+with description of your potential contribution before creating pull requests.
 
 ### Licensing
 
