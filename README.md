@@ -30,10 +30,6 @@ still it is worth to duplicate them here
 Please note that equation and references numbers in README may not match the actual in manuscript,
 so refer directly to [PDF](https://kolosovpetro.github.io/pdf/HistoryAndOverviewOfPolynomialP.pdf)
 
-### Reddit topic
-
-- [Probably a new polynomial interpolation and approximation approach?]()
-
 ### Related projects
 
 - [On the link between binomial theorem and discrete convolution](https://github.com/kolosovpetro/OnTheBinomialTheoremAndDiscreteConvolution)
