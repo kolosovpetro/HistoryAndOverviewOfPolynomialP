@@ -11,7 +11,7 @@ This manuscript provides a comprehensive historical survey of the milestones and
 as well as related works such that based onto, for instance various polynomial identities, differential equations etc.
 In addition, future research directions are proposed and discussed.
 
-### Research opportunities
+### Open research opportunities & other activities
 
 Open research opportunities are described in the section "Future research" of
 [current manuscript](https://kolosovpetro.github.io/pdf/HistoryAndOverviewOfPolynomialP.pdf),
@@ -25,6 +25,7 @@ still it is worth to duplicate them here
   expressed as double limit similarly to [20]
 - Equation (1.8) approximates odd-power $2m+1$ in some neighborhood of fixed point
   a as it shown on graphs
+- Validation and fixing grammar issues
 
 Please note that equation and references numbers in README may not match the actual in manuscript,
 so refer directly to [PDF](https://kolosovpetro.github.io/pdf/HistoryAndOverviewOfPolynomialP.pdf)
@@ -53,6 +54,8 @@ Plus, it serves as motivation for the maintainers to continue improving and addi
 ### Contributing
 
 Contributions are welcome! 🎉
+
+Please refer to open issues or propose your own changes.
 
 It's better to [create an issue](https://github.com/kolosovpetro/HistoryAndOverviewOfPolynomialP/issues/new)
 with description of your potential contribution before creating pull requests.
