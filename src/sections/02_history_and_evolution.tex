@@ -60,15 +60,18 @@ immediately turns into Binomial expansion
 However, as it said, I was not experienced mathematician back than,
 so that it appeared out for me from a little bit different perspective.
 Not following the convenient solution~\eqref{eq:cubes-difference-binomial-theorem},
-I rearranged the finite differences from table~\eqref{tab:table} explicitly to get
+I have rearranged the first order finite differences from table~\eqref{tab:table} using~\eqref{eq:cubes_interpolation}
+to get the polynomial $n^3$
 \begin{align*}
     n^3 &= [1+6\cdot0]+[1+6\cdot0+6\cdot1]+[1+6\cdot0+6\cdot1+6\cdot2]+\cdots \\
     &+[1+6\cdot0+6\cdot1+6\cdot2+\cdots+6\cdot(n-1)]
 \end{align*}
-And then combined under the summation in terms of $(n-k)$
-\[
-    n^3 = n +(n-0) \cdot6 \cdot0 + (n-1)\cdot6\cdot1 + (n-2)\cdot6\cdot2 + \cdots+1\cdot6\cdot(n-1)
-\]
+And then combined above equation under the summation in terms of $(n-k)$
+\begin{equation*}
+    \begin{split}
+        n^3 = n +(n-0) \cdot6 \cdot0 + (n-1)\cdot6\cdot1 + (n-2)\cdot6\cdot2 + \cdots + 1\cdot6\cdot(n-1)
+    \end{split}
+\end{equation*}
 Therefore, the polynomial $n^3$ can be considered as follows
 \begin{equation}
     \label{eq:cube_identity}
@@ -91,7 +94,8 @@ It is immediately seen that~\eqref{eq:cube_identity} holds looking to the table 
     \end{tabular}
     \caption{Values of $6k(n-k) + 1$.
     See the OEIS entry: \href{https://oeis.org/A287326}{\texttt{A287326}}~\cite{kolosov2017third}.
-    Sequences for $n^{5}$ and $n^7$ polynomials are at~\cite{kolosov2018fifth, kolosov2018seventh}.
+    Sequences that give the polynomials $n^{5}$ and $n^7$ as row sums
+    are also registered in the OEIS~\cite{kolosov2018fifth, kolosov2018seventh}.
     }
     \label{tab:fig_1}
 \end{table}
@@ -166,7 +170,7 @@ So that odd-power identity holds
 \end{equation*}
 It is also clearly seen
 why the above identity is true arranging the terms $30k^2(n-k)^2 + 1$ over $0 \leq k \leq n$ in table as
-it is shown in OEIS sequence~\cite{kolosov2018fifth}.
+it is shown in the OEIS sequence~\cite{kolosov2018fifth}.
 
 Therefore, the relation~\eqref{eq:cube_identity} we got previously via interpolation of the polynomial $n^3$
 can be generalized for all odd-powers $2m+1$ by constructing and solving certain system of linear equations,
@@ -333,7 +337,8 @@ For example,
     \caption{Coefficients $\coeffA{m}{r}$.}
     \label{tab:table_of_coefficients_a}
 \end{table}
-The coefficients $\coeffA{m}{r}$ are also registered in the OEIS~\cite{kolosov2018numerator,kolosov2018denominator}.
+The nominators and denominators of the coefficients $\coeffA{m}{r}$ are also registered as sequences in
+the OEIS~\cite{kolosov2018numerator,kolosov2018denominator}, respectively.
 It is as well interesting to notice that row sums of the $\coeffA{m}{r}$ give powers of $2$
 \begin{equation*}
     \sum_{r=0}^{m} \coeffA{m}{r} = 2^{2m+1} - 1
