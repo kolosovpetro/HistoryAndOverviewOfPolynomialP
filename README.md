@@ -38,6 +38,10 @@ so refer directly to [PDF](https://kolosovpetro.github.io/pdf/HistoryAndOverview
 - [On the link between binomial theorem and discrete convolution (2016-2022)](https://github.com/kolosovpetro/OnTheBinomialTheoremAndDiscreteConvolution)
 - [A study on partial dynamic equation on time scales involving derivatives of polynomials (2016-2022)](https://github.com/kolosovpetro/AStudyOnDynamicEquations)
 
+### Reddit topic
+
+- [Probably some unusual polynomial interpolation approach?](https://www.reddit.com/r/math/comments/1afo1y3/probably_some_unusual_polynomial_interpolation/)
+
 ### ⭐ Support open science on Github
 
 If you found this repository helpful or interesting, please consider giving it a star! ⭐
