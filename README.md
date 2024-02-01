@@ -32,11 +32,11 @@ so refer directly to [PDF](https://kolosovpetro.github.io/pdf/HistoryAndOverview
 
 ### Related projects
 
-- [On the link between binomial theorem and discrete convolution](https://github.com/kolosovpetro/OnTheBinomialTheoremAndDiscreteConvolution)
-- [Polynomial identity involving Binomial Theorem and Faulhaber's formula](https://github.com/kolosovpetro/PolynomialIdentityInvolvingBTandFaulhaber)
-- [Another approach to get derivative of odd-power](https://github.com/kolosovpetro/AnotherApproachToGetDerivativeOfOddPower)
-- [A study on partial dynamic equation on time scales involving derivatives of polynomials](https://github.com/kolosovpetro/AStudyOnDynamicEquations)
-- [Finding the derivative of polynomials via double limit](https://github.com/kolosovpetro/FindingTheDerivativeOfPolynomialsViaDoubleLimit)
+- [Finding the derivative of polynomials via double limit (2024)](https://github.com/kolosovpetro/FindingTheDerivativeOfPolynomialsViaDoubleLimit)
+- [Polynomial identity involving Binomial Theorem and Faulhaber's formula (2024)](https://github.com/kolosovpetro/PolynomialIdentityInvolvingBTandFaulhaber)
+- [Another approach to get derivative of odd-power (2023)](https://github.com/kolosovpetro/AnotherApproachToGetDerivativeOfOddPower)
+- [On the link between binomial theorem and discrete convolution (2016-2022)](https://github.com/kolosovpetro/OnTheBinomialTheoremAndDiscreteConvolution)
+- [A study on partial dynamic equation on time scales involving derivatives of polynomials (2016-2022)](https://github.com/kolosovpetro/AStudyOnDynamicEquations)
 
 ### ⭐ Support open science on Github
 
