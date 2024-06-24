@@ -42,7 +42,7 @@ so refer directly to [PDF](https://kolosovpetro.github.io/pdf/HistoryAndOverview
 
 - [Probably some unusual polynomial interpolation approach?](https://www.reddit.com/r/math/comments/1afo1y3/probably_some_unusual_polynomial_interpolation/)
 
-### ⭐ Support open science on Github
+### ⭐ Support open science on GitHub ⭐
 
 If you found this repository helpful or interesting, please consider giving it a star! ⭐
 
@@ -59,6 +59,10 @@ Please refer to open issues or propose your own changes.
 
 It's better to [create an issue](https://github.com/kolosovpetro/HistoryAndOverviewOfPolynomialP/issues/new)
 with description of your potential contribution before creating pull requests.
+
+### Build the manuscript
+
+Refer to the documentation: [BUILD.md](BUILD.md)
 
 ### Licensing
 
