@@ -1,12 +1,18 @@
 \begin{itemize}
-    \item Differential equation~\eqref{eq:odd-exponential-identity} can be expressed in terms of backward
-    and central differentials, as well as its dynamic equation analogs~\cite{kolosov2016study}
-    \item Definition~\eqref{eq:definition_polynomial_p} is closely related to discrete convolution, probably
-    some new identities in term of discrete convolution may be found
-    \item All kind of derivatives (forward, backward, central), including time scale ones can be expressed
-    as double limit similarly to~\cite{kolosov_2024_10575485}
-    \item Equation~\eqref{eq:definition_polynomial_p} approximates odd-power $2m+1$ in some neighborhood of fixed point
-    $a$ as it shown on the following graphs
+    \item Differential equation~\eqref{eq:odd-exponential-identity} can also be expressed in terms of backward
+    and central differential operators, including derivatives on time-scales so that results of~\cite{kolosov2016study}
+    could be generalized further.
+    \item Definition~\eqref{eq:definition_polynomial_p} is closely related to discrete convolution because
+    \begin{equation*}
+        \polynomialP{m}{b}{x} = \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=0}^{b-1} k^r(x-k)^r
+    \end{equation*}
+    where $\sum_{k=0}^{b-1} k^r(x-k)^r$ is the discrete convolution of $x^r$.
+    It is worth to get a closer look at it so that new relations in terms of discrete convolution may be found.
+    \item All kinds of derivatives e.g forward, backward and central, including the derivatives on time-scales can be expressed
+    as double limit of $\polynomialP{m}{b}{x}$ extending the results of~\cite{kolosov_2024_10575485}.
+    \item Following the results of~\url{https://arxiv.org/pdf/1603.02468v15.pdf},
+    the equation~\eqref{eq:definition_polynomial_p} approximates the odd-power polynomial $x^{2m+1}$ around given points
+    $x_i$ as it may be observed from the following plots
     \begin{figure}[H]
         \centering
         \includegraphics[width=1\textwidth]{images/n^3_approximation_m1_b3}
@@ -17,8 +23,7 @@
         \includegraphics[width=1\textwidth]{images/n^5_approximation_m2_b3}
         ~\caption{Approximation of $x^5$.}\label{fig:approximation-n5}
     \end{figure}
-    Similar polynomial approximations are partially revealed and discussed
-    in \url{https://arxiv.org/pdf/1603.02468v15.pdf}.
+    \item English grammar reviews and improvements are welcome.
     \item Improvements and suggestions to current manuscript via open-source activities at
     \url{https://github.com/kolosovpetro/HistoryAndOverviewOfPolynomialP}
 \end{itemize}

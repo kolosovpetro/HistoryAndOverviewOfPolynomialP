@@ -1,19 +1,24 @@
 \freefootnote{Sources: \url{https://github.com/kolosovpetro/HistoryAndOverviewOfPolynomialP}}
 Back than, in 2016 being a student of faculty of mechanical engineering,
-I remember myself playing with finite differences of polynomial $n^3$ over the domain of natural numbers $n\in\mathbb{N}$.
-Looking to the values in difference table,
-the first and very naive question that came to my mind was \textit{Is it possible to assemble the value of
-    $n^3$ backwards having finite differences?}
-Definitely, answer to this question is \textit{Yes}, via interpolation.
-Interpolation is a method of finding new data points based on the range of a discrete set of known data points.
+I remember myself playing with finite differences of polynomial $n^3$ over the domain of natural numbers $n\in\mathbb{N}$
+having at most $0 \leq n \leq 20$ values.
+Looking to the values in my finite difference tables, the first and very naive question that came to my mind was
+\begin{center}
+    \textit{Is it possible to re-assemble the value of
+    the polynomial $n^3$ backwards having its finite differences?}
+\end{center}
+The answer to this question is definitely \textit{Yes}, utilizing the interpolation principles.
+Interpolation is a process of finding new data points based on the range of a discrete set of known data points.
 Interpolation has been well-developed in between 1674--1684
-by Issac Newton's fundamental work on the topic that is nowadays known as foundation of classical interpolation
+by Issac Newton's fundamental works, nowadays known as foundation of classical interpolation
 theory~\cite{meijering2002chronology}.
-That time, in 2016, due to lack of knowledge and perspective of view I started re-inventing the interpolation
-formula by myself,fueled by purest interest and sense of mystery.
-All mathematical laws and relations exist from the very beginning, but we only find and describe them,
-I was inspired by that mindset and started my own journey.
-So let's begin considering the table of finite differences of the polynomial $n^3$
+
+That time, in 2016, I was a first-year mechanical engineering undergraduate,
+so that due to lack of knowledge and perspective of view I started re-inventing interpolation
+formula myself, fueled by purest passion and feeling of mystery.
+All mathematical laws and relations exist from the very beginning, but we only find and describe them, I thought.
+That mindset truly inspired me so that my own mathematical journey has been started.
+Let us begin considering the table of finite differences of the polynomial $n^3$
 \begin{table}[H]
     \begin{center}
         \setlength\extrarowheight{-6pt}
@@ -41,43 +46,46 @@ can be expressed via summation over $n$, e.g
         \Delta(1^3) &= 1+6\cdot0+6\cdot1 \\
         \Delta(2^3) &= 1+6\cdot0+6\cdot1+6\cdot2 \\
         \Delta(3^3) &= 1+6\cdot0+6\cdot1+6\cdot2+6\cdot3 \\
-        &\; \; \vdots \\
-        \Delta(n^3) &= 1+6\cdot0+6\cdot1+6\cdot2+6\cdot3+\cdots+6\cdot n = 1 + 6 \sum_{k=0}^{n} k
+        &\; \; \vdots
     \end{split}
 \end{align}
+Finally reaching the general one form
+\begin{equation}
+    \Delta(n^3) = 1+6\cdot0+6\cdot1+6\cdot2+6\cdot3+\cdots+6\cdot n = 1 + 6 \sum_{k=0}^{n} k\label{eq:general-cube-eq}
+\end{equation}
 The one experienced mathematician would immediately notice a spot to apply Faulhaber's formula~\cite{beardon1996sums}
 to expand the term $\sum_{k=0}^{n} k$ reaching expected result that matches Binomial theorem~\cite{abramowitz1988handbook},
 so that
 \begin{equation*}
     \sum_{k=0}^{n} k = \frac{1}{2}(n+n^2)
 \end{equation*}
-Then ours above relation $\Delta(n^3) = 1+6\cdot0+6\cdot1+6\cdot2+6\cdot3+\cdots+6\cdot n = 1 + 6 \sum_{k=0}^{n} k$
-immediately turns into Binomial expansion
+Then ours relation~\eqref{eq:general-cube-eq} immediately turns into Binomial expansion
 \begin{equation}
     \Delta(n^3) = (n+1)^3 - n^3 = 1 + 6 \left[ \frac{1}{2}(n+n^2) \right] = 1 + 3 n + 3 n^2 = \sum_{k=0}^{2} \binom{3}{k} n^k
     \label{eq:cubes-difference-binomial-theorem}
 \end{equation}
-However, as it said, I was not experienced mathematician back than,
-so that it appeared out for me from a little bit different perspective.
+However, as it said, I was not the experienced one mathematician back than,
+so that I reviewed the relation~\eqref{eq:general-cube-eq} from a little bit different perspective.
 Not following the convenient solution~\eqref{eq:cubes-difference-binomial-theorem},
-I have rearranged the first order finite differences from table~\eqref{tab:table} using~\eqref{eq:cubes_interpolation}
+I have rearranged the first order finite differences from the table~\eqref{tab:table} using~\eqref{eq:cubes_interpolation}
 to get the polynomial $n^3$
 \begin{align*}
     n^3 &= [1+6\cdot0]+[1+6\cdot0+6\cdot1]+[1+6\cdot0+6\cdot1+6\cdot2]+\cdots \\
     &+[1+6\cdot0+6\cdot1+6\cdot2+\cdots+6\cdot(n-1)]
 \end{align*}
-And then combined above equation under the summation in terms of $(n-k)$
+Then, combining above equation under the summation in terms of $(n-k)$
 \begin{equation*}
     \begin{split}
-        n^3 = n +(n-0) \cdot6 \cdot0 + (n-1)\cdot6\cdot1 + (n-2)\cdot6\cdot2 + \cdots + 1\cdot6\cdot(n-1)
+        n^3 &= n + [(n-0) \cdot 6 \cdot 0] + [(n-1)\cdot6\cdot1] + [(n-2)\cdot6\cdot2] + \cdots \\
+            &\cdots + [(n-k)\cdot 6 \cdot k] + \cdots + [1\cdot6\cdot(n-1)]
     \end{split}
 \end{equation*}
-Therefore, the polynomial $n^3$ can be considered as follows
+We have successfully reached interpolation of the polynomial $n^3$
 \begin{equation}
     \label{eq:cube_identity}
     n^3 = \sum_{k=1}^{n} 6k(n-k) + 1
 \end{equation}
-It is immediately seen that~\eqref{eq:cube_identity} holds looking to the table of its values
+It is immediately seen that~\eqref{eq:cube_identity} holds by observing the table of $6k(n-k) + 1$ values
 \begin{table}[H]
     \setlength\extrarowheight{-6pt}
     \begin{tabular}{c|cccccccc}
@@ -94,15 +102,16 @@ It is immediately seen that~\eqref{eq:cube_identity} holds looking to the table 
     \end{tabular}
     \caption{Values of $6k(n-k) + 1$.
     See the OEIS entry: \href{https://oeis.org/A287326}{\texttt{A287326}}~\cite{kolosov2017third}.
-    Sequences that give the polynomials $n^{5}$ and $n^7$ as row sums
-    are also registered in the OEIS~\cite{kolosov2018fifth, kolosov2018seventh}.
-    }
+    Sequences such that row sums give the polynomials $n^{5}$ and $n^7$
+    are also registered in the OEIS~\cite{kolosov2018fifth, kolosov2018seventh}.}
     \label{tab:fig_1}
 \end{table}
 Therefore, we have reached our base case by successfully interpolating the polynomial $n^3$.
-Fairly enough that next curiosity would be, for example
-\textit{Well, if we have a relation~\eqref{eq:cube_identity}
-for polynmial $n^3$ then is it true that~\eqref{eq:cube_identity} can be generalized, say for $n^4$ or $n^5$ either?}
+Fairly enough that the next curiosity would be
+\begin{center}
+    \textit{Well, if the relation~\eqref{eq:cube_identity} true for the polynmial $n^3$
+        then is it true that~\eqref{eq:cube_identity} can be generalized for higher powers, e.g. for $n^4$ or $n^5$ either?}
+\end{center}
 That was my next question, however without any expectation of the form of generalized relation.
 Soon enough my idea was caught by other people.
 In 2018, Albert Tkaczyk has published two of his works~\cite{tkaczyk2018problem, tkaczyk2018continuation}
