@@ -20,7 +20,7 @@ still it is worth to duplicate them here
 - Differential equation (2.1) can be expressed in terms of backward and central differentials,
   as well as its dynamic equation analogs [19]
 - Definition (1.8) is closely related to discrete convolution, probably some new identities
-  in term of discrete convolution may be found
+  in terms of discrete convolution may be found
 - All kind of derivatives (forward, backward, central), including time scale ones can be
   expressed as double limit similarly to [20]
 - Equation (1.8) approximates odd-power $2m+1$ in some neighborhood of fixed point
