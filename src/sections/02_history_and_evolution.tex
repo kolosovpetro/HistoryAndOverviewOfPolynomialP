@@ -80,7 +80,7 @@ Then, combining above equation under the summation in terms of $(n-k)$
             &\cdots + [(n-k)\cdot 6 \cdot k] + \cdots + [1\cdot6\cdot(n-1)]
     \end{split}
 \end{equation*}
-We have successfully reached interpolation of the polynomial $n^3$
+Hence, we have successfully reached interpolation of the polynomial $n^3$
 \begin{equation}
     \label{eq:cube_identity}
     n^3 = \sum_{k=1}^{n} 6k(n-k) + 1
@@ -103,7 +103,7 @@ It is immediately seen that~\eqref{eq:cube_identity} holds by observing the tabl
     \caption{Values of $6k(n-k) + 1$.
     See the OEIS entry: \href{https://oeis.org/A287326}{\texttt{A287326}}~\cite{kolosov2017third}.
     Sequences such that row sums give the polynomials $n^{5}$ and $n^7$
-    are also registered in the OEIS~\cite{kolosov2018fifth, kolosov2018seventh}.}
+    are also registered in OEIS~\cite{kolosov2018fifth, kolosov2018seventh}.}
     \label{tab:fig_1}
 \end{table}
 Therefore, we have reached our base case by successfully interpolating the polynomial $n^3$.
@@ -178,8 +178,8 @@ So that odd-power identity holds
     n^5 = \sum_{k=1}^{n} 30k^2(n-k)^2 + 1
 \end{equation*}
 It is also clearly seen
-why the above identity is true arranging the terms $30k^2(n-k)^2 + 1$ over $0 \leq k \leq n$ in table as
-it is shown in the OEIS sequence~\cite{kolosov2018fifth}.
+why the above identity is true arranging the terms $30k^2(n-k)^2 + 1$ over $0 \leq k \leq n$ as tabular.
+See OEIS sequence~\cite{kolosov2018fifth}.
 
 Therefore, the relation~\eqref{eq:cube_identity} we got previously via interpolation of the polynomial $n^3$
 can be generalized for all odd-powers $2m+1$ by constructing and solving certain system of linear equations,
@@ -190,8 +190,9 @@ and its generalized form to be
 where $\coeffA{m}{r}$ are real coefficients.
 In more details, the equation~\eqref{eq:odd-power-identity} is discussed
 separately in~\cite{kolosov2022106, kolosov2023polynomial}.
+
 However, constructing and solving systems of linear equations each time for every odd-power $2m+1$ requires huge effort,
-there must be a function that generates the set of real coefficients $\coeffA{m}{r}$, I thought.
+there must be a function that generates the set of real coefficients $\coeffA{m}{r}$ for each fixed $m$, I thought.
 As it turned out, that assumption was correct.
 So that I reached MathOverflow community in search of answers that arrived quite shortly.
 In~\cite{alekseyev2018mathoverflow}, Dr. Max Alekseyev has provided a complete and comprehensive formula to calculate
@@ -346,13 +347,14 @@ For example,
     \caption{Coefficients $\coeffA{m}{r}$.}
     \label{tab:table_of_coefficients_a}
 \end{table}
-The nominators and denominators of the coefficients $\coeffA{m}{r}$ are also registered as sequences in
-the OEIS~\cite{kolosov2018numerator,kolosov2018denominator}, respectively.
+The nominators and denominators of the coefficients $\coeffA{m}{r}$ are also registered as sequences
+in OEIS~\cite{kolosov2018numerator,kolosov2018denominator}, respectively.
 It is as well interesting to notice that row sums of the $\coeffA{m}{r}$ give powers of $2$
 \begin{equation*}
     \sum_{r=0}^{m} \coeffA{m}{r} = 2^{2m+1} - 1
 \end{equation*}
-Therefore, we have successfully shown and generalized previously obtained equation~\eqref{eq:cube_identity}
+Therefore, we have successfully generalized previously obtained equation~\eqref{eq:cube_identity} for each
+natural $m\geq 0$
 \begin{thm}
     For every $n\geq 1, \; n,m\in\mathbb{N}$ there are $\coeffA{m}{0}, \coeffA{m}{1},\dots,\coeffA{m}{m}$,
     such that
