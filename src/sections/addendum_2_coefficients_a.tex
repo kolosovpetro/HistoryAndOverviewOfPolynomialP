@@ -1,0 +1,117 @@
+﻿Consider the definition~\eqref{eq:definition_coefficient_a} of the coefficients $\coeffA{m}{r}$, it can be written as
+\begin{equation*}
+    \coeffA{m}{r} \colonequals
+    \begin{cases}
+    (2r+1)
+        \binom{2r}{r}, & \text{if } r=m; \\
+        \sum_{d \geq 2r+1}^{m} \coeffA{m}{d} \underbrace{(2r+1) \binom{2r}{r} \binom{d}{2r+1} \frac{(-1)^{d-1}}{d-r} \bernoulli{2d-2r}}_{T(d,r)}, & \text{if } 0 \leq r<m; \\
+        0, & \text{if } r<0 \text{ or } r>m,
+    \end{cases}
+\end{equation*}
+Therefore, let be a definition of the real coefficient $T(d,r)$
+\begin{defn}
+    Real coefficient $T(d,r)$
+    \begin{equation*}
+        T(d,r) = (2r+1) \binom{2r}{r} \binom{d}{2r+1} \frac{(-1)^{d-1}}{d-r} \bernoulli{2d-2r}
+    \end{equation*}
+\end{defn}
+\begin{examp}
+    Let be $m=2$ so first we get $\coeffA{2}{2}$
+    \begin{equation*}
+        \coeffA{2}{2} = 5\binom{4}{2}=30
+    \end{equation*}
+    Then $\coeffA{2}{1} = 0$ because $\coeffA{m}{d}$ is zero in the range $m/2 \leq d < m$ means that zero for $d$
+    in $1 \leq d < 2$.
+    Finally, the coefficient $\coeffA{2}{0}$ is
+    \begin{equation*}
+        \begin{split}
+            \coeffA{2}{0}
+            = \sum_{d \geq 1}^{2} \coeffA{2}{d} \cdot T(d, 0)
+            &= \coeffA{2}{1} \cdot T(1, 0) + \coeffA{2}{2} \cdot T(2, 0) \\
+            &= 30 \cdot \frac{1}{30} = 1
+        \end{split}
+    \end{equation*}
+\end{examp}
+\begin{examp}
+    Let be $m=3$ so that first we get $\coeffA{3}{3}$
+    \begin{equation*}
+        \coeffA{3}{3} = 7 \binom{6}{3}= 140
+    \end{equation*}
+    Then $\coeffA{3}{2} = 0$ because $\coeffA{m}{d}$ is zero in the range $m/2 \leq d < m$ means that zero for $d$
+    in $2 \leq d < 3$.
+    The $\coeffA{3}{1}$ coefficient is non-zero and calculated as
+    \begin{equation*}
+        \begin{split}
+            \coeffA{3}{1} = \sum_{d \geq 3}^{3} \coeffA{3}{d} \cdot T(d,1) = \coeffA{3}{3} \cdot T(3,1)
+            = 140 \cdot \left( -\frac{1}{10} \right) = -14
+        \end{split}
+    \end{equation*}
+    Finally, the coefficient $\coeffA{3}{0}$ is
+    \begin{equation*}
+        \begin{split}
+            \coeffA{3}{0}= \sum_{d \geq 1}^{3} \coeffA{3}{d} \cdot T(d,0)
+            &= \coeffA{3}{1} \cdot T(1,0) + \coeffA{3}{2} \cdot T(2,0) + \coeffA{3}{3} \cdot T(3,0) \\
+            &= -14 \cdot \frac{1}{6} + 140 \cdot \frac{1}{42} = 1
+        \end{split}
+    \end{equation*}
+\end{examp}
+\begin{examp}
+    Let be $m=4$ so that first we get $\coeffA{4}{4}$
+    \begin{equation*}
+        \coeffA{4}{4} = 9 \binom{8}{4}= 630
+    \end{equation*}
+    Then $\coeffA{4}{3} = 0$ and $\coeffA{4}{2} = 0$
+    because $\coeffA{m}{d}$ is zero in the range $m/2 \leq d < m$ means that zero for $d$ in $2 \leq d < 4$.
+    The value of the coefficient $\coeffA{4}{1}$ is non-zero and calculated as
+    \begin{equation*}
+        \begin{split}
+            \coeffA{4}{1}
+            = \sum_{d \geq 3}^{4} \coeffA{4}{d} \cdot T(d,1)
+            = \coeffA{4}{3} \cdot T(3,1) + \coeffA{4}{4} \cdot T(4,1)
+            = 630 \cdot \left( -\frac{4}{21} \right)
+            = -120
+        \end{split}
+    \end{equation*}
+    Finally, the coefficient $\coeffA{4}{0}$ is
+    \begin{equation*}
+        \begin{split}
+            \coeffA{4}{0}
+            = \sum_{d \geq 1}^{4} \coeffA{4}{d} \cdot T(d, 0)
+            = \coeffA{4}{1} \cdot T(1, 0) + \coeffA{4}{4} \cdot T(4, 0)
+            = -120 \cdot \frac{1}{6} + 630 \cdot \frac{1}{30} = 1
+        \end{split}
+    \end{equation*}
+\end{examp}
+\begin{examp}
+    Let be $m=5$ so that first we get $\coeffA{5}{5}$
+    \begin{equation*}
+        \coeffA{5}{5} = 11 \binom{10}{5}= 2772
+    \end{equation*}
+    Then $\coeffA{5}{4} = 0$ and $\coeffA{5}{3} = 0$
+    because $\coeffA{m}{d}$ is zero in the range $m/2 \leq d < m$ means that zero for $d$ in $3 \leq d < 5$.
+    The value of the coefficient $\coeffA{5}{2}$ is non-zero and calculated as
+    \begin{equation*}
+        \begin{split}
+            \coeffA{5}{2}
+            = \sum_{d \geq 5}^{5} \coeffA{5}{d} \cdot T(d,2) = \coeffA{5}{5} \cdot T(5,2) = 2772 \cdot \frac{5}{21} = 660
+        \end{split}
+    \end{equation*}
+    The value of the coefficient $\coeffA{5}{1}$ is non-zero and calculated as
+    \begin{equation*}
+        \begin{split}
+            \coeffA{5}{1}
+            &= \sum_{d \geq 3}^{5} \coeffA{5}{d} \cdot T(d,1)
+            = \coeffA{5}{3} \cdot T(3,1) + \coeffA{5}{4} \cdot T(4,1) + \coeffA{5}{5} \cdot T(5,1) \\
+            &= 2772 \cdot \left( - \frac{1}{2} \right) = -1386
+        \end{split}
+    \end{equation*}
+    Finally, the coefficient $\coeffA{5}{0}$ is
+    \begin{equation*}
+        \begin{split}
+            \coeffA{5}{0}
+            &= \sum_{d \geq 1}^{5} \coeffA{5}{d} \cdot T(d, 0)
+            = \coeffA{5}{1} \cdot T(1, 0) + \coeffA{5}{2} \cdot T(2, 0) + \coeffA{5}{5} \cdot T(5, 0) \\
+            &= -1386 \cdot \frac{1}{6} + 660 \cdot \frac{1}{30} + 2772 \cdot \frac{5}{66} = 1
+        \end{split}
+    \end{equation*}
+\end{examp}
