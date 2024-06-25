@@ -201,7 +201,7 @@ The main idea of Alekseyev's approach was to utilize dynamic programming methods
 taking base case $\coeffA{m}{m}$ evaluating next $\coeffA{m}{m-1}$ via backtracking,
 continuing similarly up to $\coeffA{m}{0}$.
 Before we consider the derivation of the coefficients $\coeffA{m}{r}$,
-a few words must be said regarding the Faulhaber's formula
+a few words must be said regarding the Faulhaber's formula~\cite{beardon1996sums}
 \begin{equation*}
     \sum_{k=1}^{n} k^{p} = \frac{1}{p+1}\sum_{j=0}^{p} \binom{p+1}{j} \bernoulli{j} n^{p+1-j}
 \end{equation*}
@@ -238,7 +238,7 @@ Now, we notice that
          \frac{(-1)^r}{j} \binom{r}{2r-j+1}, & \text{if } j>0.
     \end{cases}\label{eq:combinatorial-identity}
 \end{equation}
-An elegant proof of the above binomial identity is provided at~\cite{scheuer2023mathstackexchange}.
+An elegant proof of the binomial identity~\eqref{eq:combinatorial-identity} is presented in~\cite{scheuer2023mathstackexchange}.
 In particular, the equation~\eqref{eq:combinatorial-identity} is zero for $0< t \leq j$.
 So that taking $j=0$ we have
 \begin{equation*}
@@ -283,10 +283,6 @@ Replacing odd $\ell$ by $d$ we get
         &\sum_{r} \coeffA{m}{r} \left[ \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} \right]
         + 2 \sum_{r} \coeffA{m}{r} \left[ \sum_{d} \frac{(-1)^r}{2r-2d} \binom{r}{2d+1} \bernoulli{2r-2d} n^{2d+1} \right]
         - n^{2m+1} = 0
-%        \\
-%        &\sum_{r=0}^{m} \coeffA{m}{r} \left[ \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} \right]
-%        + 2 \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{d=0}^{(r-1)/2} \frac{(-1)^r}{2r-2d} \binom{r}{2d+1} \bernoulli{2r-2d} n^{2d+1} \right]
-%        - n^{2m+1} = 0
     \end{split}\label{eq:equation7}
 \end{equation}
 Taking the coefficient of $n^{2m+1}$ in~\eqref{eq:equation7}, we get
@@ -367,9 +363,9 @@ natural $m\geq 0$
 Theorem~\eqref{eq:odd-power-theorem} can be considered as succeeded interpolation of the polynomial $x^{2m+1}$
 over the domains $n\in\mathbb{R}, \; m\in\mathbb{N}$.
 
-Finally, we got our road to the main definition of polynomial $\polynomialP{m}{b}{x}$
-as it is closely related to the equation~\eqref{eq:odd-power-theorem}.
-So let's define it without further hesitation
+Finally, we got our road to the main definition of the polynomial $\polynomialP{m}{b}{x}$.
+Introducing the parameter $b$ to the upper summation bound to~\eqref{eq:odd-power-theorem},
+we have the definition
 \begin{defn} (Polynomial $\polynomialP{m}{b}{x} $of degree $2m+1$.)
     \begin{equation}
         \polynomialP{m}{b}{x} = \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r
@@ -378,19 +374,5 @@ So let's define it without further hesitation
 \end{defn}
 where $\coeffA{m}{r}$ are real coefficients~\eqref{eq:definition_coefficient_a}, $m\in\mathbb{N}$ and $(x, b)\in \mathbb{R}$.
 A comprehensive discussion on the polynomial $\polynomialP{m}{b}{x}$ as well as its properties can be found at~\cite{kolosov2016link}.
-%For example, the polynomials $\polynomialP{m}{b}{x}$ for $0\leq m\leq 3$ are
-%\begin{equation*}
-%    \begin{split}
-%        \polynomialP{0}{b}{x}
-%        &=b \\
-%        \polynomialP{1}{b}{x}
-%        &=3 b^2 - 2 b^3 - 3 b x + 3 b^2 x \\
-%        \polynomialP{2}{b}{x}
-%        &=10 b^3 - 15 b^4 + 6 b^5- 15 b^2 x + 30 b^3 x - 15 b^4 x + 5 b x^2 - 15 b^2 x^2 + 10 b^3 x^2 \\
-%        \polynomialP{3}{b}{x}
-%        &=-7 b^2 + 28 b^3 - 70 b^5 + 70 b^6 - 20 b^7 + 7 b x - 42 b^2 x + 175 b^4 x - 210 b^5 x + 70 b^6 x \\
-%        &+ 14 b x^2 - 140 b^3 x^2 + 210 b^4 x^2 - 84 b^5 x^2 + 35 b^2 x^3 - 70 b^3 x^3 + 35 b^4 x^3
-%    \end{split}
-%\end{equation*}
 In 2023, Albert Tkaczyk yet again extended the theorem~\eqref{eq:odd-power-theorem} to the so-called three dimension case
 so that it gives polynomials of the form $n^{3l+2}$ at~\cite{albert_tkaczyk_2023_8371454}.
