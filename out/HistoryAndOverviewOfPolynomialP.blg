@@ -7,16 +7,16 @@ Reallocating 'name_of_file' (item size: 1) to 32 items.
 Database file #1: HistoryAndOverviewOfPolynomialP.bib
 You've used 24 entries,
             1791 wiz_defined-function locations,
-            574 strings with 8088 characters,
-and the built_in function-call counts, 3599 in all, are:
-= -- 318
+            575 strings with 8173 characters,
+and the built_in function-call counts, 3608 in all, are:
+= -- 320
 > -- 110
 < -- 1
 + -- 52
 - -- 28
 * -- 113
-:= -- 577
-add.period$ -- 77
+:= -- 579
+add.period$ -- 78
 call.type$ -- 24
 change.case$ -- 23
 chr.to.int$ -- 0
@@ -24,13 +24,13 @@ cite$ -- 24
 duplicate$ -- 150
 empty$ -- 444
 format.name$ -- 28
-if$ -- 822
+if$ -- 824
 int.to.chr$ -- 0
 int.to.str$ -- 24
 missing$ -- 9
-newline$ -- 128
+newline$ -- 129
 num.names$ -- 24
-pop$ -- 115
+pop$ -- 114
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
@@ -45,4 +45,4 @@ type$ -- 0
 warning$ -- 0
 while$ -- 32
 width$ -- 26
-write$ -- 257
+write$ -- 259

@@ -9,12 +9,14 @@
   \url{https://infoscience.epfl.ch/record/63085/files/meijering0201.pdf}.
 
 \bibitem{beardon1996sums}
-Alan~F Beardon.
+Alan~F. Beardon.
 \newblock {Sums of powers of integers}.
 \newblock {\em {The American mathematical monthly}}, 103(3):201--213, 1996.
+\newblock
+  \url{https://les-mathematiques.net/vanilla/uploads/editor/5w/3wm5emwr0i7p.pdf}.
 
 \bibitem{abramowitz1988handbook}
-Milton Abramowitz, Irene~A Stegun, and Robert~H Romer.
+Milton Abramowitz, Irene~A. Stegun, and Robert~H. Romer.
 \newblock Handbook of mathematical functions with formulas, graphs, and
   mathematical tables, 1988.
 
@@ -124,7 +126,8 @@ Petro Kolosov.
 \newblock \url{https://doi.org/10.5281/zenodo.10575485}.
 
 \bibitem{barbero2020two}
-J~Fernando Barbero~G, Juan Margalef-Bentabol, and Eduardo~JS Villase{\~n}or.
+J.~Fernando Barbero~G., Juan Margalef-Bentabol, and Eduardo~J.S.
+  Villase{\~n}or.
 \newblock {A two-sided Faulhaber-like formula involving Bernoulli polynomials}.
 \newblock {\em Comptes Rendus. Math{\'e}matique}, 358(1):41--44, 2020.
 \newblock \url{https://doi.org/10.5802/crmath.10}.

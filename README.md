@@ -2,14 +2,15 @@
 
 ### Abstract
 
-Polynomial $\mathbf{P}^m_b(x)$ is a $2m+1, \quad m\in\mathbb{N}$ degree polynomial in $(x,b) \in \mathbb{R}$,
-such that derived applying certain methods of interpolation, so that initially we reach the base case for $m=1$
-generalizing it up to $m\in\mathbb{N}$ afterwards.
-In particular, the polynomial $\mathbf{P}^m_b(x)$ may be successfully applicable for polynomial interpolation
-and approximation approaches.
-This manuscript provides a comprehensive historical survey of the milestones and evolution of $\mathbf{P}^m_b(x)$
-as well as related works such that based onto, for instance various polynomial identities, differential equations etc.
-In addition, future research directions are proposed and discussed.
+The polynomial $\mathbf{P}^m_b(x)$ is a $2m+1$ degree polynomial in $(x,b) \in \mathbb{R}$
+defined by an identity for odd-powers.
+The odd-power identity is derived applying certain interpolation approaches
+including systems of linear equations and recurrence relations.
+This manuscript provides a comprehensive historical survey of the milestones and evolution of the polynomial
+$\mathbf{P}^m_b(x)$ continuing with related works based on it.
+Notable results inside related works include the relation between ordinary and partial derivatives for odd-powers,
+finding the derivative of polynomials via double limit etc.
+Finally, the manuscript concludes with future research directions and activities.
 
 ### Open research opportunities & other activities
 
@@ -20,7 +21,7 @@ still it is worth to duplicate them here
 - Differential equation (2.1) can be expressed in terms of backward and central differentials,
   as well as its dynamic equation analogs [19]
 - Definition (1.8) is closely related to discrete convolution, probably some new identities
-  in term of discrete convolution may be found
+  in terms of discrete convolution may be found
 - All kind of derivatives (forward, backward, central), including time scale ones can be
   expressed as double limit similarly to [20]
 - Equation (1.8) approximates odd-power $2m+1$ in some neighborhood of fixed point
@@ -42,7 +43,7 @@ so refer directly to [PDF](https://kolosovpetro.github.io/pdf/HistoryAndOverview
 
 - [Probably some unusual polynomial interpolation approach?](https://www.reddit.com/r/math/comments/1afo1y3/probably_some_unusual_polynomial_interpolation/)
 
-### ⭐ Support open science on Github
+### ⭐ Support open science on GitHub ⭐
 
 If you found this repository helpful or interesting, please consider giving it a star! ⭐
 
@@ -59,6 +60,10 @@ Please refer to open issues or propose your own changes.
 
 It's better to [create an issue](https://github.com/kolosovpetro/HistoryAndOverviewOfPolynomialP/issues/new)
 with description of your potential contribution before creating pull requests.
+
+### Build the manuscript
+
+Refer to the documentation: [BUILD.md](BUILD.md)
 
 ### Licensing
 

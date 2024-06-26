@@ -50,7 +50,9 @@
 \newcommand{\nobarfrac}{\genfrac{}{}{0pt}{}}
 \def\llceil{\left\lceil\kern-3.5pt\left\lceil}
 \def\rrfloor{\right\rfloor\kern-3.5pt\right\rfloor}
-\newcommand \llceilCoefficient [3] {\llceil \nobarfrac{#1}{#2} \rrfloor_{#3}}
+\newcommand \llceilCoefficient [2] {\llceil \nobarfrac{#1}{#2} \rrfloor}
+
+% free foot note
 \let\svthefootnote\thefootnote
 \newcommand\freefootnote[1]{%
     \let\thefootnote\relax%
@@ -68,14 +70,19 @@
 
 \numberwithin{equation}{section}
 
-\title[History And Overview Of the Polynomial \texorpdfstring{$\polynomialP{m}{b}{x}$}{P[m,b,x]}]
-{History And Overview Of the Polynomial \texorpdfstring{$\polynomialP{m}{b}{x}$}{P[m,b,x]}}
+\title[History and overview of the polynomial \texorpdfstring{$\polynomialP{m}{b}{x}$}{P[m,b,x]}]
+{History and overview of the polynomial \texorpdfstring{$\polynomialP{m}{b}{x}$}{P[m,b,x]}}
 \author[Petro Kolosov]{Petro Kolosov}
 \address{Software Developer, DevOps Engineer}
 \email{kolosovp94@gmail.com}
 \urladdr{https://kolosovpetro.github.io}
 \keywords{
-    Polynomials, Finite differences, Interpolation, Polynomial identities
+    Binomial theorem,
+    Faulhaber's formula,
+    Polynomials,
+    Finite differences,
+    Interpolation,
+    Polynomial identities
 }
 \subjclass[2010]{41-XX, 26E70, 05A30}
 \date{\today}
@@ -89,8 +96,8 @@
         Power sums,
         Binomial theorem,
         Power function
-        Binomial coefficient,
-        Bernoulli number,
+        Binomial coefficients,
+        Bernoulli numbers,
         Pascal's triangle,
         Faulhaber's formula,
         Derivative,
@@ -106,8 +113,8 @@
         Power sums,
         Binomial theorem,
         Power function
-        Binomial coefficient,
-        Bernoulli number,
+        Binomial coefficients,
+        Bernoulli numbers,
         Pascal's triangle,
         Faulhaber's formula,
         Derivative,
@@ -125,7 +132,7 @@
     \tableofcontents
 
 
-    \section{History and evolution of the \texorpdfstring{$\polynomialP{m}{b}{x}$}{P[m,b,x]}}
+    \section{History and evolution of the polynomial \texorpdfstring{$\polynomialP{m}{b}{x}$}{P[m,b,x]}}
     \label{sec:history-and-evolution-of-the-topic}
     \input{sections/02_history_and_evolution}
 
@@ -134,7 +141,7 @@
     \input{sections/03_related_works}
 
 
-    \section{Future research and activity}\label{sec:future-research}
+    \section{Future research and activities}\label{sec:future-research}
     \input{sections/04_future_research}
 
 
@@ -144,5 +151,15 @@
     \bibliographystyle{unsrt}
     \bibliography{HistoryAndOverviewOfPolynomialP}
     \noindent \textbf{Version:} \input{sections/version}
+
+
+    \section{Addendum 1: Examples of the polynomial \texorpdfstring{$\polynomialP{m}{b}{x}$}{P[m,b,x]}}
+    \label{sec:addendum-1}
+    \input{sections/addendum_1_polynomials_p}
+
+
+    \section{Addendum 2: Derivation of the coefficients \texorpdfstring{$\coeffA{m}{r}$}{A[m,r]}}
+    \label{sec:addendum-2}
+    \input{sections/addendum_2_coefficients_a}
 
 \end{document}
