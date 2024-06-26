@@ -120,7 +120,7 @@ In 2018, Albert Tkaczyk has published two of his works~\cite{tkaczyk2018problem,
 showing the cases for polynomials $n^5, \; n^7$ and $n^9$ that were obtained similarly as~\eqref{eq:cube_identity}.
 In short, it appears that relation~\eqref{eq:cube_identity} could be generalized
 for any non-negative odd power $2m+1$ solving a system of linear equations.
-It was proposed that case for $n^5$ has the explicit form
+It was proposed that the case for $n^5$ has explicit form
 \begin{equation*}
     n^5 = \sum_{k=1}^{n} \left[ A k^2(n-k)^2 + Bk(n-k) + C \right]
 \end{equation*}
@@ -132,8 +132,7 @@ to reach the form of a compact double sum
 \end{equation*}
 Observing the equation above, the potential form of generalized odd-power identity becomes more obvious.
 To evaluate the coefficients $\coeffA{2}{0}, \coeffA{2}{1}, \coeffA{2}{2}$
-we construct a system of linear equations.
-In its explicit form it is
+it is necessary construct and solve a system of linear equations following the process
 \begin{equation*}
     \begin{split}
         n^5 &= \sum_{r=0}^{2} \coeffA{2}{r} \sum_{k=1}^{n} k^r (n-k)^r \\
@@ -141,7 +140,8 @@ In its explicit form it is
     \end{split}
 \end{equation*}
 Expand the terms $\sum_{k=1}^{n} k^r (n-k)^r$ applying the
-Faulhaber's formula $\sum_{k=1}^{n}k^{p} = \frac{1}{p+1} \sum_{j=0}^{p} \binom{p+1}{j} B_{j} n^{p+1-j}$ to get the equation
+Faulhaber's formula~\cite{beardon1996sums}
+to get the equation
 \begin{equation*}
     \coeffA{m}{0} n
     + \coeffA{m}{1} \left[ \frac{1}{6} (-n + n^3) \right]
@@ -180,12 +180,13 @@ So that the odd-power identity holds
     n^5 = \sum_{k=1}^{n} 30k^2(n-k)^2 + 1
 \end{equation*}
 It is also clearly seen
-why the above identity is true arranging the terms $30k^2(n-k)^2 + 1$ over $0 \leq k \leq n$ as tabular.
+why the above identity is true by arranging the terms $30k^2(n-k)^2 + 1$ over $0 \leq k \leq n$ as tabular.
 See the OEIS sequence~\cite{kolosov2018fifth}.
 
-Now we can see that the relation~\eqref{eq:cube_identity} we got previously via interpolation of the polynomial $n^3$
-can be generalized for all odd-powers $2m+1$ by constructing and solving a system of linear equations,
-so that generalized form of the relation~\eqref{eq:cube_identity} appears to be
+Now we can see that the relation~\eqref{eq:cube_identity}
+we got via interpolation of cubes
+can be generalized for all non-negative odd-powers $2m+1$ by constructing and solving a system of linear equations.
+Therefore, the generalized form of odd-power identity is
 \begin{equation}
     n^{2m+1} = \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} (n-k)^{r}\label{eq:odd-power-identity}
 \end{equation}
