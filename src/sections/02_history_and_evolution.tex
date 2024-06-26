@@ -49,7 +49,7 @@ can be expressed via summation over $n$, e.g
         &\; \; \vdots
     \end{split}
 \end{align}
-Finally reaching the general one form
+Finally reaching its generic form
 \begin{equation}
     \Delta(n^3) = 1+6\cdot0+6\cdot1+6\cdot2+6\cdot3+\cdots+6\cdot n = 1 + 6 \sum_{k=0}^{n} k\label{eq:general-cube-eq}
 \end{equation}
@@ -181,9 +181,9 @@ It is also clearly seen
 why the above identity is true arranging the terms $30k^2(n-k)^2 + 1$ over $0 \leq k \leq n$ as tabular.
 See OEIS sequence~\cite{kolosov2018fifth}.
 
-Therefore, the relation~\eqref{eq:cube_identity} we got previously via interpolation of the polynomial $n^3$
+Now we can see that the relation~\eqref{eq:cube_identity} we got previously via interpolation of the polynomial $n^3$
 can be generalized for all odd-powers $2m+1$ by constructing and solving certain system of linear equations,
-and its generalized form to be
+and its generalized form appears to be
 \begin{equation}
     n^{2m+1} = \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} (n-k)^{r}\label{eq:odd-power-identity}
 \end{equation}
