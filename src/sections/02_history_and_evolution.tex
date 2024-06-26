@@ -1,6 +1,6 @@
 \freefootnote{Sources: \url{https://github.com/kolosovpetro/HistoryAndOverviewOfPolynomialP}}
 Back than, in 2016 being a student of faculty of mechanical engineering,
-I remember myself playing with finite differences of polynomial $n^3$ over the domain of natural numbers $n\in\mathbb{N}$
+I remember myself playing with finite differences of the polynomial $n^3$ over the domain of natural numbers $n\in\mathbb{N}$
 having at most $0 \leq n \leq 20$ values.
 Looking to the values in my finite difference tables, the first and very naive question that came to my mind was
 \begin{center}
@@ -69,23 +69,25 @@ so that I reviewed the relation~\eqref{eq:general-cube-eq} from a little bit dif
 Not following the convenient solution~\eqref{eq:cubes-difference-binomial-theorem},
 I have rearranged the first order finite differences from the table~\eqref{tab:table} using~\eqref{eq:cubes_interpolation}
 to get the polynomial $n^3$
-\begin{align*}
-    n^3 &= [1+6\cdot0]+[1+6\cdot0+6\cdot1]+[1+6\cdot0+6\cdot1+6\cdot2]+\cdots \\
+\begin{align}
+    \label{eq:rearrangement_to_get_cubes}
+    n^3 &= [1+6\cdot0]+[1+6\cdot0+6\cdot1]+[1+6\cdot0+6\cdot1+6\cdot2]+\cdots \nonumber \\
     &+[1+6\cdot0+6\cdot1+6\cdot2+\cdots+6\cdot(n-1)]
-\end{align*}
-Then, combining above equation under the summation in terms of $(n-k)$
+\end{align}
+Then, rearranging the terms of the equation~\eqref{eq:rearrangement_to_get_cubes} so that it turns into summation
+in terms of $k (n-k)$
 \begin{equation*}
     \begin{split}
         n^3 &= n + [(n-0) \cdot 6 \cdot 0] + [(n-1)\cdot6\cdot1] + [(n-2)\cdot6\cdot2] + \cdots \\
-            &\cdots + [(n-k)\cdot 6 \cdot k] + \cdots + [1\cdot6\cdot(n-1)]
+        &\cdots + [(n-k)\cdot 6 \cdot k] + \cdots + [1\cdot6\cdot(n-1)]
     \end{split}
 \end{equation*}
-Hence, we have successfully reached interpolation of the polynomial $n^3$
+Gives the interpolation of the polynomial $n^3$
 \begin{equation}
     \label{eq:cube_identity}
     n^3 = \sum_{k=1}^{n} 6k(n-k) + 1
 \end{equation}
-It is immediately seen that~\eqref{eq:cube_identity} holds by observing the table of $6k(n-k) + 1$ values
+It is immediately seen that~\eqref{eq:cube_identity} is true by observing the table of $6k(n-k) + 1$ values
 \begin{table}[H]
     \setlength\extrarowheight{-6pt}
     \begin{tabular}{c|cccccccc}
@@ -103,7 +105,7 @@ It is immediately seen that~\eqref{eq:cube_identity} holds by observing the tabl
     \caption{Values of $6k(n-k) + 1$.
     See the OEIS entry: \href{https://oeis.org/A287326}{\texttt{A287326}}~\cite{kolosov2017third}.
     Sequences such that row sums give the polynomials $n^{5}$ and $n^7$
-    are also registered in OEIS~\cite{kolosov2018fifth, kolosov2018seventh}.}
+        are also registered in OEIS~\cite{kolosov2018fifth, kolosov2018seventh}.}
     \label{tab:fig_1}
 \end{table}
 Therefore, we have reached our base case by successfully interpolating the polynomial $n^3$.
@@ -131,7 +133,7 @@ so that we reach the form of compact double sum
 Now the potential form generalized of odd-power identity becomes more obvious.
 To evaluate the coefficients $\coeffA{2}{0}, \coeffA{2}{1}, \coeffA{2}{2}$
 we construct the system of linear equations.
-In its explicit form
+In its explicit form it is
 \begin{equation*}
     \begin{split}
         n^5 &= \sum_{r=0}^{2} \coeffA{2}{r} \sum_{k=1}^{n} k^r (n-k)^r \\
@@ -191,7 +193,7 @@ where $\coeffA{m}{r}$ are real coefficients.
 In more details, the equation~\eqref{eq:odd-power-identity} is discussed
 separately in~\cite{kolosov2022106, kolosov2023polynomial}.
 
-However, constructing and solving systems of linear equations each time for every odd-power $2m+1$ requires huge effort,
+However, constructing and solving systems of linear equations each time for every odd-power $2m+1$ requires a huge effort,
 there must be a function that generates the set of real coefficients $\coeffA{m}{r}$ for each fixed $m$, I thought.
 As it turned out, that assumption was correct.
 So that I reached MathOverflow community in search of answers that arrived quite shortly.
@@ -200,13 +202,15 @@ coefficient $\coeffA{m}{r}$ for each natural $m\geq 0, \; 0 \leq r \leq m$.
 The main idea of Alekseyev's approach was to utilize dynamic programming methods to evaluate $\coeffA{m}{r}$ recursively,
 taking base case $\coeffA{m}{m}$ evaluating next $\coeffA{m}{m-1}$ via backtracking,
 continuing similarly up to $\coeffA{m}{0}$.
-Before we consider the derivation of the coefficients $\coeffA{m}{r}$,
+Before we consider the derivation of the recurrent formula for coefficients $\coeffA{m}{r}$,
 a few words must be said regarding the Faulhaber's formula~\cite{beardon1996sums}
 \begin{equation*}
     \sum_{k=1}^{n} k^{p} = \frac{1}{p+1}\sum_{j=0}^{p} \binom{p+1}{j} \bernoulli{j} n^{p+1-j}
 \end{equation*}
-it is important to note that summation bound is $p$ while binomial coefficient upper bound is $p+1$.
-It means that we cannot omit summation bounds letting $j$ run over infinity, unless we do some trick as
+it is important to notice that iteration step $j$ is bounded by the value of exponent $p$,
+while the upper bound of the binomial coefficient is $p+1$.
+That means we cannot omit summation bounds letting $j$ run over infinity,
+unless we perform the following action on the Faulhaber's formula
 \begin{equation*}
     \begin{split}
         \sum_{k=1}^{n} k^{p}
@@ -215,10 +219,11 @@ It means that we cannot omit summation bounds letting $j$ run over infinity, unl
         &= \left[ \frac{1}{p+1}\sum_{j} \binom{p+1}{j} \bernoulli{j} n^{p+1-j} \right] - \bernoulli{p+1}
     \end{split}
 \end{equation*}
-So that now we consider the derivation of coefficients $\coeffA{m}{r}$.
-Using the Faulhaber's formula
+At this point we are good to go through the entire derivation of the recurrent formula for
+coefficients $\coeffA{m}{r}$.
+Applying both Binomial theorem and Faulhaber's formula
 $\sum_{k=1}^{n} k^{p} = \left[ \frac{1}{p+1}\sum_{j} \binom{p+1}{j} \bernoulli{j} n^{p+1-j} \right] - \bernoulli{p+1}$
-we get
+to the equation~\eqref{eq:odd-power-identity} we get
 \begin{equation*}
     \begin{split}
         &\sum_{k=1}^{n} k^{r} (n-k)^{r}
@@ -257,8 +262,8 @@ Now let's simplify the double summation applying the identity~\eqref{eq:combinat
         &- \underbrace{\left[ \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t} \right]}_{(\diamond)}
     \end{split}
 \end{equation*}
-Hence, introducing $\ell=2r-j+1$ to $(\star)$ and $\ell=r-t$ to $(\diamond)$ we collapse the common terms of the above
-equation so that we get
+Hence, introducing $\ell=2r-j+1$ to $(\star)$ and $\ell=r-t$ to $(\diamond)$
+we collapse the common terms in the equation above so that
 \begin{equation*}
     \begin{split}
         \sum_{k=1}^{n} k^{r} (n-k)^{r}
@@ -268,7 +273,8 @@ equation so that we get
         &= \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} + 2 \sum_{\mathrm{odd \; \ell}} \frac{(-1)^r}{2r+1-\ell} \binom{r}{\ell} \bernoulli{2r+1-\ell} n^{\ell}
     \end{split}
 \end{equation*}
-Using the definition of $\coeffA{m}{r}$, we obtain the following identity for polynomials in $n$
+Assuming that $\coeffA{m}{r}$ is defined by~\eqref{eq:odd-power-identity},
+we obtain the following relation for polynomials in $n$
 \begin{equation*}
     \sum_{r} \coeffA{m}{r} \frac{1}{(2r+1) \binom{2r}r} n^{2r+1}
     + 2 \sum_{r} \coeffA{m}{r} \sum_{\mathrm{odd \; \ell}} \frac{(-1)^r}{2r+1-\ell} \binom{r}{\ell} \bernoulli{2r+1-\ell} n^{\ell}
@@ -285,7 +291,7 @@ Replacing odd $\ell$ by $d$ we get
         - n^{2m+1} = 0
     \end{split}\label{eq:equation7}
 \end{equation}
-Taking the coefficient of $n^{2m+1}$ in~\eqref{eq:equation7}, we get
+Let be $r=m$, then taking the coefficient of $n^{2m+1}$ in~\eqref{eq:equation7} we get
 \begin{equation*}
     \coeffA{m}{m} = (2m+1)\binom{2m}{m}
 \end{equation*}
@@ -302,25 +308,27 @@ i.e
 \begin{equation*}
     \coeffA{m}{d} = (-1)^{m-1} \frac{(2m+1)!}{d!d!m!(m-2d-1)!} \frac{1}{m-d} \bernoulli{2m-2d}
 \end{equation*}
-Continue similarly we can express $\coeffA{m}{r}$ for each integer $r$ in range $m/2^{s+1}\leq r < m/2^s$
+Continue similarly we can compute $\coeffA{m}{r}$ for each integer $r$ in range $m/2^{s+1}\leq r < m/2^s$
 (iterating consecutively $s=1,2,\ldots$) via previously determined values of $\coeffA{m}{d}$ as follows
 \begin{equation*}
     \coeffA{m}{r} =
     (2r+1) \binom{2r}{r} \sum_{d \geq 2r+1}^{m} \coeffA{m}{d} \binom{d}{2r+1} \frac{(-1)^{d-1}}{d-r}
     \bernoulli{2d-2r}
 \end{equation*}
-Finally, the coefficient $\coeffA{m}{r}$ is defined recursively as
-\begin{equation}
-    \label{eq:definition_coefficient_a}
-    \coeffA{m}{r} \colonequals
-    \begin{cases}
-    (2r+1)
-        \binom{2r}{r}, & \text{if } r=m; \\
-        (2r+1) \binom{2r}{r} \sum_{d \geq 2r+1}^{m} \coeffA{m}{d} \binom{d}{2r+1} \frac{(-1)^{d-1}}{d-r}
-        \bernoulli{2d-2r}, & \text{if } 0 \leq r<m; \\
-        0, & \text{if } r<0 \text{ or } r>m,
-    \end{cases}
-\end{equation}
+Finally, we are capable to define the coefficient $\coeffA{m}{r}$ via the next recurrent relation
+\begin{defn} (Definition of the real coefficients $\coeffA{m}{r}$.)
+    \begin{equation}
+        \label{eq:definition_coefficient_a}
+        \coeffA{m}{r} \colonequals
+        \begin{cases}
+        (2r+1)
+            \binom{2r}{r} & \mathrm{if} \; r=m \\
+            (2r+1) \binom{2r}{r} \sum_{d \geq 2r+1}^{m} \coeffA{m}{d} \binom{d}{2r+1} \frac{(-1)^{d-1}}{d-r}
+            \bernoulli{2d-2r} & \mathrm{if} \; 0 \leq r<m \\
+            0 & \mathrm{if} \; r<0 \; \mathrm{or} \; r>m
+        \end{cases}
+    \end{equation}
+\end{defn}
 where $\bernoulli{t}$ are Bernoulli numbers~\cite{bateman1953higher}.
 It is assumed that $\bernoulli{1}=\frac{1}{2}$.
 For example,
@@ -344,13 +352,13 @@ For example,
     \label{tab:table_of_coefficients_a}
 \end{table}
 The nominators and denominators of the coefficients $\coeffA{m}{r}$ are also registered as sequences
-in OEIS~\cite{kolosov2018numerator,kolosov2018denominator}, respectively.
+in OEIS~\cite{kolosov2018numerator,kolosov2018denominator}.
 It is as well interesting to notice that row sums of the $\coeffA{m}{r}$ give powers of $2$
 \begin{equation*}
     \sum_{r=0}^{m} \coeffA{m}{r} = 2^{2m+1} - 1
 \end{equation*}
-Therefore, we have successfully generalized previously obtained equation~\eqref{eq:cube_identity} for each
-natural $m\geq 0$
+Therefore, we have successfully generalized obtained previously cube identity~\eqref{eq:cube_identity}
+for each non-negative odd-power $2m+1$
 \begin{thm}
     For every $n\geq 1, \; n,m\in\mathbb{N}$ there are $\coeffA{m}{0}, \coeffA{m}{1},\dots,\coeffA{m}{m}$,
     such that
@@ -364,7 +372,7 @@ Theorem~\eqref{eq:odd-power-theorem} can be considered as succeeded interpolatio
 over the domains $n\in\mathbb{R}, \; m\in\mathbb{N}$.
 
 Finally, we got our road to the main definition of the polynomial $\polynomialP{m}{b}{x}$.
-Introducing the parameter $b$ to the upper summation bound to~\eqref{eq:odd-power-theorem},
+Introducing the parameter $b$ to the upper summation bound of the equation~\eqref{eq:odd-power-theorem},
 we have the definition
 \begin{defn} (Polynomial $\polynomialP{m}{b}{x} $of degree $2m+1$.)
     \begin{equation}
