@@ -3,6 +3,7 @@
 - Install `MikTeX`: https://miktex.org/download
 - Update `MikTeX`
 - Install `SumatraPDF` viewer: https://www.sumatrapdfreader.org/download-free-pdf-viewer
+- Path to SumatraPDF: `C:\Program Files\SumatraPDF`
 - Install `Intellij IDEA Ultimate`: https://www.jetbrains.com/idea/download/#section=windows
 - Activate `Intellij IDEA Ultimate`
 - Install `TeXiFy IDEA` plugin: https://plugins.jetbrains.com/plugin/9473-texify-idea
