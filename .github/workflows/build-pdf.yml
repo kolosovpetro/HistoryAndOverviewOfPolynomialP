@@ -15,6 +15,7 @@ on:
 
 env:
   FILE_NAME: "HistoryAndOverviewOfPolynomialP"
+  ACTIONS_RUNNER_DEBUG: false
 
 jobs:
   build-pdf:
@@ -23,34 +24,34 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v0.9.15
+        uses: gittools/actions/gitversion/setup@v1.1.1
         with:
           versionSpec: '5.x'
 
       - name: Determine Version
-        uses: gittools/actions/gitversion/execute@v0.9.15
+        uses: gittools/actions/gitversion/execute@v1.1.1
 
       - name: Print SemVer
         run: |
-          echo ${{ env.GITVERSION_SEMVER }}
-          echo ${{ env.GitVersion_InformationalVersion }}
-          echo ${{ env.GitVersion_EscapedBranchName }}
-          newVersion="${{ env.GITVERSION_SEMVER }}+${{ env.GITVERSION_BRANCHNAME }}.${{ env.GITVERSION_SHORTSHA }}"
+          echo "SemVer: ${{ env.GitVersion_SemVer }}"
+          echo "BranchName: ${{ env.GitVersion_BranchName }}"
+          echo "ShortSha: ${{ env.GitVersion_ShortSha }}"
+          newVersion="${{ env.GitVersion_SemVer }}+${{ env.GitVersion_BranchName }}.${{ env.GitVersion_ShortSha }}"
           echo "Next version: $newVersion"
 
       - name: Update version.tex
         shell: bash
         run: |
-          newVersion="${{ env.GITVERSION_SEMVER }}+${{ env.GITVERSION_BRANCHNAME }}.${{ env.GITVERSION_SHORTSHA }}"
+          newVersion="${{ env.GitVersion_SemVer }}+${{ env.GitVersion_BranchName }}.${{ env.GitVersion_ShortSha }}"
           sed -i "s|Local-0.1.0|$newVersion|" "src/sections/version.tex"
 
       - name: Build PDF
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: "${{ env.FILE_NAME }}.tex"
           working_directory: src
@@ -60,7 +61,7 @@ jobs:
           ls -lsa src
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: "${{ env.FILE_NAME }}-${{ env.GitVersion_InformationalVersion }}"
           path: |
@@ -70,7 +71,7 @@ jobs:
             src/sections
 
       - name: Upload artifacts PDF
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: "${{ env.FILE_NAME }}-PDF-${{ env.GitVersion_InformationalVersion }}"
           path: |
