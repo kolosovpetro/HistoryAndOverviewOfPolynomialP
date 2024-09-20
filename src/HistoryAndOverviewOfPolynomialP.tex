@@ -46,11 +46,8 @@
 \newcommand{\stirlingii}{\genfrac{\{}{\}}{0pt}{}}
 \newcommand{\eulerianNumber}{\genfrac{\langle}{\rangle}{0pt}{}}
 
-% for llceil coeffcient
-\newcommand{\nobarfrac}{\genfrac{}{}{0pt}{}}
-\def\llceil{\left\lceil\kern-3.5pt\left\lceil}
-\def\rrfloor{\right\rfloor\kern-3.5pt\right\rfloor}
-\newcommand \llceilCoefficient [2] {\llceil \nobarfrac{#1}{#2} \rrfloor}
+% for brack coefficient
+\newcommand \brackCoefficient [3] {{#1 \brack #2}_{#3}}
 
 % free foot note
 \let\svthefootnote\thefootnote

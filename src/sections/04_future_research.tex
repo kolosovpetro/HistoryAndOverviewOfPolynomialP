@@ -16,15 +16,15 @@
     It is worth to get a closer look at it so that new relations in terms of discrete convolution may be found.
     \item All kinds of derivatives e.g forward, backward and central, including the derivatives on time-scales can be expressed
     as double limit of $\polynomialP{m}{b}{x}$ extending the results of~\cite{kolosov_2024_10575485}.
-    \item Introducing the definition of coefficient $\llceilCoefficient{m,n}{k}$
+    \item Introducing the definition of coefficient $\brackCoefficient{n}{k}{m}$
     \begin{equation*}
-        \llceilCoefficient{m,n}{k} = \sum_{r=0}^{m} \coeffA{m}{r} k^r (n-k)^r
+        \brackCoefficient{n}{k}{m} = \sum_{r=0}^{m} \coeffA{m}{r} k^r (n-k)^r
     \end{equation*}
     the novel identities can be reached, for example
     \begin{align*}
-        \llceilCoefficient{m, 2t+1}{1} &= \llceilCoefficient{m, t+2}{2} \\
-        \llceilCoefficient{m, n}{k} &= \llceilCoefficient{m, n}{n-k} \\
-        \llceilCoefficient{m, 2t-3r}{r} &= \llceilCoefficient{m, t}{2r} = \llceilCoefficient{m, 2t-3r}{2t-4r}
+        \brackCoefficient{2t+1}{1}{m} &= \brackCoefficient{t+2}{2}{m} \\
+        \brackCoefficient{n}{k}{m} &= \brackCoefficient{n}{n-k}{m} \\
+        \brackCoefficient{2t-3r}{r}{m} &= \brackCoefficient{t}{2r}{m} = \brackCoefficient{2t-3r}{2t-4r}{m}
     \end{align*}
     so that combinatorial sense of above is also a topic to research.
     \item Following the results of~\url{https://arxiv.org/pdf/1603.02468v15.pdf},
