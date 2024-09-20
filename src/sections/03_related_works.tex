@@ -1,5 +1,5 @@
 In this section let's give a short overview of related works that are based
-onto the main results of~\cite{kolosov2016link} mainly on polynomials $\polynomialP{m}{b}{x}$.
+onto the main results of~\cite{kolosov2016link} mainly on the polynomial $\polynomialP{m}{b}{x}$
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{images/realated_works_graph}
@@ -8,6 +8,17 @@ onto the main results of~\cite{kolosov2016link} mainly on polynomials $\polynomi
 \begin{itemize}
     \item In \textit{On the link between binomial theorem and discrete convolution}~\cite{kolosov2016link}
     which is denoted as 6:
+    Let $\mathbf{P}^{m}_{b}(x)$ be a $2m+1$-degree polynomial in $x$ and $b \in \mathbb{R}$
+    \[
+        \mathbf{P}^{m}_{b}(x) = \sum_{k=0}^{b-1} \sum_{r=0}^{m} \mathbf{A}_{m,r} k^r (x-k)^r
+    \]
+    where $\mathbf{A}_{m,r}$ are real coefficients.
+    In this manuscript, we introduce the polynomial $\mathbf{P}^{m}_{b}(x)$ and study its properties,
+    establishing a polynomial identity for odd-powers in terms of this polynomial.
+    Based on mentioned polynomial identity for odd-powers,
+    we explore the connection between the Binomial theorem and discrete convolution of odd-powers,
+    further extending this relation to the multinomial case.
+    All findings are verified using Mathematica programs.
     \item In \textit{A study on partial dynamic equation on time scales involving derivatives
     of polynomials}~\cite{kolosov2016study} which is denoted as 7:
     derives and discusses an identity that connects the timescale derivative of odd-powered polynomial
@@ -22,6 +33,10 @@ onto the main results of~\cite{kolosov2016link} mainly on polynomials $\polynomi
     In addition, we discuss various derivative operators in context of partial cases of above equation,
     we show finite difference, classical derivative, $q-$derivative, $q-$power derivative on behalf of it.
     \item In \textit{106.37 An unusual identity for odd-powers}~\cite{kolosov2022106} which is denoted as 8:
+    Explores and proves the polynomial identity for odd-powers
+    \[
+        n^{2m+1} = \sum_{k=1}^{n} \sum_{r=0}^{m} \mathbf{A}_{m,r} k^r (n-k)^r
+    \]
     \item In \textit{Another approach to get derivative of odd-power}~\cite{kolosov2023another} which is denoted as 9:
     is given a relation in terms of partial differential equations such that
     ordinary derivative of odd-power $2m+1$ can be reached in terms of partial derivatives of $\polynomialP{m}{b}{x}$.
@@ -42,7 +57,7 @@ onto the main results of~\cite{kolosov2016link} mainly on polynomials $\polynomi
         n^{2m+1} = \sum_{k=1}^{n} \mathbf{A}_{m,0} k^0 (n-k)^0 + \mathbf{A}_{m,1}(n-k)^1
         + \cdots + \mathbf{A}_{m,m} k^m (n-k)^m
     \]
-    which is direct consequence of the definition of $\polynomialP{m}{b}{x}$.
+    which is a direct consequence of the definition of $\polynomialP{m}{b}{x}$, Binomial theorem and Faulhaber's formula.
     \item In \textit{Finding the derivative of polynomials via double limit}~\cite{kolosov_2024_10575485}
     which is denoted as 11: gives another perspective of ordinary derivatives of polynomials allowing expressing
     them via double limit, because
