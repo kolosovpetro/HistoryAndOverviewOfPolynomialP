@@ -1,0 +1,20 @@
+Table[BrackCoefficient[2, 1, k], {k, 0, 10}]: https://oeis.org/A083420
+Table[BrackCoefficient[3, 1, k], {k, 0, 20}]: https://oeis.org/A096053
+Table[BrackCoefficient[4, k, 1], {k, 0, 20}]: Gives n-th rows of https://oeis.org/A287326
+Table[BrackCoefficient[k, 2, 1], {k, 0, 20}]: Gives n-th column of https://oeis.org/A287326
+Table[BrackCoefficient[k, 1, 2], {k, 0, 20}]: https://oeis.org/A158558
+Table[Sum[BrackCoefficient[2, 1, r], {r, 0, k}], {k, 0, 10}]: https://oeis.org/A144414
+Table[Sum[BrackCoefficient[3, 2, r], {r, 0, k}], {k, 0, 10}]: https://oeis.org/A004004
+
+Table[BraceCoefficient[r, 1, 1], {r, 0, 10}]: https://oeis.org/A007531
+Table[BraceCoefficient[r, 2, 2], {r, 0, 10}]: https://oeis.org/A061167
+Table[BraceCoefficient[r, 3, 3], {r, 0, 10}]: missing
+Table[BraceCoefficient[1, r, 1], {r, 0, 10}]: row sums give 1^3
+Table[BraceCoefficient[2, r, 2], {r, 0, 10}]: row sums give 2^5
+Table[BraceCoefficient[3, r, 3], {r, 0, 10}]: row sums give 3^7
+Table[BraceCoefficient[4, r, 4], {r, 0, 10}]: row sums give 4^9
+Table[BraceCoefficient[5, r, 5], {r, 0, 10}]: row sums give 5^11
+Table[BraceCoefficient[6, r, 6], {r, 0, 10}]: row sums give 6^13
+Table[BraceCoefficient[7, r, 7], {r, 0, 10}]: row sums give 7^15
+Table[BraceCoefficient[8, r, 8], {r, 0, 10}]: row sums give 8^17
+Table[BraceCoefficient[9, r, 9], {r, 0, 10}]: row sums give 9^19

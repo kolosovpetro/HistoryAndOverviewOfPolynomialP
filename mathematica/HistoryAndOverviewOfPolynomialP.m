@@ -8,6 +8,9 @@ See https://kolosovpetro.github.io/pdf/AStudyOnDynamicEquations.pdf."
 L::usage= "L[m, n, k] returns the polynomial L of integers m, n, k. See https://kolosovpetro.github.io/pdf/AStudyOnDynamicEquations.pdf."
 
 P::usage= "P[m, x, b] returns the polynomial P of m, x and b. See https://kolosovpetro.github.io/pdf/AStudyOnDynamicEquations.pdf."
+BrackCoefficient::usage= "Returns brack coefficient in n,k,m integers."
+BraceCoefficient::usage= "Returns brac coefficient in n,k,m integers."
+BraceCoefficient1::usage= "Returns brac coefficient in n,k,m integers."
 
 sigma::usage= "Forward jump operator on time scales."
 
@@ -50,13 +53,13 @@ timeScaleDerivaitveOddPower[m_, x_] := Expand[Limit[(sigma[x]^(2m + 1) - t^(2m +
 
 theorem[m_] := Expand[timeScaleDerivativeX[m, Global`x, sigma[Global`x]] + timeScaleDerivativeB[m, Global`x, Global`x]];
 
+BrackCoefficient[n_, k_, m_]:=Sum[A[m, r]*k^r*(n-k)^r, {r, 0, m}];
+BraceCoefficient[n_, r_, m_]:=Sum[A[m, r]*k^r*(n-k)^r, {k, 0, n-1}];
+BraceCoefficient1[n_, r_, m_]:=Sum[A[m, r]*k^r*(n-k)^r, {k, 1, n}];
+
 End[ ]
 
 EndPackage[ ]
-
-
-
-
 
 
 
