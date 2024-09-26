@@ -2,15 +2,15 @@
 
 ### Abstract
 
-The polynomial $\mathbf{P}^m_b(x)$ is a $2m+1$ degree polynomial in $(x,b) \in \mathbb{R}$
-defined by an identity for odd-powers.
-The odd-power identity is derived applying certain interpolation approaches
-including systems of linear equations and recurrence relations.
-This manuscript provides a comprehensive historical survey of the milestones and evolution of the polynomial
-$\mathbf{P}^m_b(x)$ continuing with related works based on it.
-Notable results inside related works include the relation between ordinary and partial derivatives for odd-powers,
-finding the derivative of polynomials via double limit etc.
-Finally, the manuscript concludes with future research directions and activities.
+The polynomial $\mathbf{P}^m_b(x)$ is a polynomial of degree $2m+1$ in $(x,b) \in \mathbb{R}$,
+defined by an identity for odd powers, closely linked to Binomial theorem and Faulhaber's formula.
+The odd-power identity is derived using certain interpolation techniques,
+including systems of linear equations, recurrence relations, and finite differences.
+This manuscript offers a comprehensive historical survey of the milestones and evolution
+of the polynomial $\mathbf{P}^m_b(x)$, followed by related works based on it.
+Notable results in related works include the relation between ordinary and partial derivatives
+for odd powers and finding polynomial derivatives via a double limit.
+Finally, the manuscript proposes future research directions.
 
 ### Open research opportunities & other activities
 
