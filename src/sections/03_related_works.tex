@@ -1,7 +1,7 @@
-We show related works in format of directed graph where node represents a work and edge represents a citation
-between two works.
+We show related works in format of a directed graph, where node represents
+a work and edge represents a citation between two works.
 For example, the node 12 (current manuscript) cites the manuscripts 7 and 8.
-Nodes of the graph are
+Nodes of the related work graph are
 \begin{itemize}
     \item {\Large \textcircled{\normalsize 12}} is this manuscript
     \item {\Large \textcircled{\normalsize 7}} is \textit{A study on partial dynamic equation on time scales involving derivatives
@@ -67,14 +67,6 @@ Nodes of the graph are
         \label{eq:odd-exponential-identity}
     \end{equation}
     where $f_{y} (x, z) = \sum_{k=1}^{z} \sum_{r=0}^{y} \coeffA{y}{r} k^r (x-k)^r = \polynomialP{y}{z}{x}$.
-%    \item {\Large \textcircled{\normalsize 11}}
-%    In \textit{Finding the derivative of polynomials via double limit}~\cite{kolosov_2024_10575485}:
-%    Applies the results {\Large \textcircled{\normalsize 6}} by providing
-%    another perspective of ordinary derivatives of polynomials allowing expressing
-%    them via a double limit, because
-%    \begin{align*}
-%        \lim_{h \to 0} \polynomialP{m}{x+h}{x} = x^{2m+1}
-%    \end{align*}
     \item {\Large \textcircled{\normalsize B}}
     In \textit{A two-sided Faulhaber-like formula involving Bernoulli polynomials}~\cite{barbero2020two}:
     Based on equation~\eqref{eq:equation7}, the authors give a new identity involving
@@ -101,32 +93,14 @@ Nodes of the graph are
     \begin{align*}
         \lim_{h \to 0} \polynomialP{m}{x+h}{x} = x^{2m+1}
     \end{align*}
-%    \item {\Large \textcircled{\normalsize B}}
-%    In \textit{A two-sided Faulhaber-like formula involving Bernoulli polynomials}~\cite{barbero2020two}:
-%    Based on~\eqref{eq:equation7}, the authors give a new identity involving
-%    Bernoulli polynomials and combinatorial numbers that provides,
-%    in particular, the Faulhaber-like formula for sums of the form $1^m(n-1)^m + 2^m (n -2)^m + \cdots + (n - 1)^m 1^m$
-%    for positive integers $m$ and $n$.
-%    \item {\Large \textcircled{\normalsize 6}}
-%    In \textit{On the link between binomial theorem and discrete convolution}~\cite{kolosov2016link}:
-%    Let $\mathbf{P}^{m}_{b}(x)$ be a $2m+1$-degree polynomial in $x$ and $b \in \mathbb{R}$
-%    \[
-%        \mathbf{P}^{m}_{b}(x) = \sum_{k=0}^{b-1} \sum_{r=0}^{m} \mathbf{A}_{m,r} k^r (x-k)^r
-%    \]
-%    where $\mathbf{A}_{m,r}$ are real coefficients.
-%    In this manuscript, we introduce the polynomial $\mathbf{P}^{m}_{b}(x)$ and study its properties,
-%    establishing a polynomial identity for odd-powers in terms of this polynomial.
-%    Based on mentioned polynomial identity for odd-powers,
-%    we explore the connection between the Binomial theorem and discrete convolution of odd-powers,
-%    further extending this relation to the multinomial case.
-%    All findings are verified using Mathematica programs.
     \item Three sequences were contributed to the
     OEIS~\cite{kolosov2018coefficientspolynomial1, kolosov2018coefficientspolynomial2, kolosov2018coefficientspolynomial3}
     showing the coefficients of the polynomial $\polynomialP{m}{b}{x}$ having fixed points $m,b$ while $x\in\mathbb{R}$.
     \item OEIS sequences such that row sums give odd-powers~\cite{kolosov2017third, kolosov2018fifth, kolosov2018seventh}.
     \item OEIS sequences related to the coefficients $\coeffA{m}{r}$~\cite{kolosov2018numerator, kolosov2018denominator}.
 \end{itemize}
-The indexes of the related works graph are same that are on the website
+The node indexes in the related works graph are not random, persisting the same values as
+these works have on my personal website
 \begin{center}
     \href{https://kolosovpetro.github.io/math/}{\texttt{kolosovpetro.github.io/math}}
 \end{center}
