@@ -148,11 +148,21 @@ Finally, we are capable to define the following recurrence relation for coeffici
 \end{defn}
 where $\bernoulli{t}$ are Bernoulli numbers~\cite{bateman1953higher}.
 It is assumed that $\bernoulli{1}=\frac{1}{2}$.
+Properties of the coefficients $\coeffA{m}{r}$
+\begin{itemize}
+    \item $\coeffA{m}{m} = \binom{2m}{m}$
+    \item $\coeffA{m}{r} = 0$ for $m < 0$ and $r > m$
+    \item $\coeffA{m}{r} = 0$ for $r < 0$
+    \item $\coeffA{m}{r} = 0$ for $\frac{m}{2} \leq r < m$
+    \item $\coeffA{m}{0} = 1$ for $m \geq 0$
+    \item $\coeffA{m}{r}$ are integers for $m \leq 11$
+    \item Row sums: $\sum_{r=0}^{m} \coeffA{m}{r} = 2^{2m+1} - 1$
+\end{itemize}
 For example,
 \input{sections/figures/05_fig_coefficients_a}
 The nominators and denominators of the coefficients $\coeffA{m}{r}$ are also registered as sequences
 in OEIS~\cite{kolosov2018numerator,kolosov2018denominator}.
-It is as well interesting to notice that row sums of the $\coeffA{m}{r}$ give powers of $2$
+It is as well interesting to notice that row sums of the $\coeffA{m}{r}$ give the powers of $2$
 \begin{equation*}
     \sum_{r=0}^{m} \coeffA{m}{r} = 2^{2m+1} - 1
 \end{equation*}
