@@ -1,0 +1,137 @@
+\subsection{System of linear equations approach}\label{subsec:system-of-linear-equations-approach}
+Soon enough the question~\eqref{question:higher_powers} got attention from other people.
+In 2018, Albert Tkaczyk has published two of his works~\cite{tkaczyk2018problem, tkaczyk2018continuation}
+showing the cases for polynomials $n^5, \; n^7$ and $n^9$ that were obtained similarly as~\eqref{eq:cube_identity}.
+In short, it appears that relation~\eqref{eq:cube_identity} could be generalized
+for any non-negative odd power $2m+1$ solving a system of linear equations.
+It was proposed that the case for $n^5$ has explicit form
+\begin{equation*}
+    n^5 = \sum_{k=1}^{n} \left[ A k^2(n-k)^2 + Bk(n-k) + C \right]
+\end{equation*}
+where $A,B,C$ are yet-unknown coefficients.
+Denote $A,B,C$ as $\coeffA{2}{0}, \coeffA{2}{1}, \coeffA{2}{2}$
+to reach the form of a compact double sum
+\begin{equation*}
+    n^5 = \sum_{k=1}^{n} \sum_{r=0}^{2} \coeffA{2}{r} k^r (n-k)^r
+\end{equation*}
+Observing the equation above, the potential form of generalized odd-power identity becomes more obvious.
+To evaluate the coefficients $\coeffA{2}{0}, \coeffA{2}{1}, \coeffA{2}{2}$
+it is necessary construct and solve a system of linear equations following the process
+\begin{equation*}
+    \begin{split}
+        n^5 &= \sum_{r=0}^{2} \coeffA{2}{r} \sum_{k=1}^{n} k^r (n-k)^r \\
+        &= \coeffA{2}{0} \sum_{k=1}^{n} k^0 (n-k)^0 + \coeffA{2}{1} \sum_{k=1}^{n} k^1 (n-k)^1 + \coeffA{2}{2} \sum_{k=1}^{n} k^2 (n-k)^2
+    \end{split}
+\end{equation*}
+Expand the terms $\sum_{k=1}^{n} k^r (n-k)^r$ applying the
+Faulhaber's formula~\cite{beardon1996sums}
+to get the equation
+\begin{equation*}
+    \coeffA{m}{0} n
+    + \coeffA{m}{1} \left[ \frac{1}{6} (-n + n^3) \right]
+    + \coeffA{m}{2} \left[ \frac{1}{30} (-n + n^5) \right] - n^5 = 0
+\end{equation*}
+Multiplying by $30$ both right-hand side and left-hand side, we get
+\begin{equation*}
+    30 \coeffA{2}{0} n + 5 \coeffA{2}{1} (-n + n^3) + \coeffA{2}{2} (-n + n^5) - 30n^5 = 0
+\end{equation*}
+Expanding the brackets and rearranging the terms gives
+\begin{equation*}
+    30 \coeffA{2}{0} - 5 \coeffA{2}{1} n + 5 \coeffA{2}{1} n^3 - \coeffA{2}{2} n + \coeffA{2}{2} n^5 - 30n^5 = 0
+\end{equation*}
+Combining the common terms yields
+\begin{equation*}
+    n (30 \coeffA{2}{0} - 5 \coeffA{2}{1} - \coeffA{2}{2}) + 5 \coeffA{2}{1} n^3 + n^5 (\coeffA{2}{2} - 30) = 0
+\end{equation*}
+Therefore, the system of linear equations follows
+\begin{equation*}
+    \begin{cases}
+        30 \coeffA{2}{0} - 5 \coeffA{2}{1} - \coeffA{2}{2} = 0 \\
+        \coeffA{2}{1} = 0 \\
+        \coeffA{2}{2} - 30 = 0
+    \end{cases}
+\end{equation*}
+Solving it, we get
+\begin{equation*}
+    \begin{cases}
+        \coeffA{2}{2} = 30 \\
+        \coeffA{2}{1} = 0 \\
+        \coeffA{2}{0} = 1
+    \end{cases}
+\end{equation*}
+So that the odd-power identity holds
+\begin{equation*}
+    n^5 = \sum_{k=1}^{n} 30k^2(n-k)^2 + 1
+\end{equation*}
+It is also clearly seen
+why the above identity is true by arranging the terms $30k^2(n-k)^2 + 1$ over $0 \leq k \leq n$ as tabular.
+See the OEIS sequence~\cite{kolosov2018fifth}
+\input{sections/figures/03_fig_triangle_row_sums_give_fifth_power}
+
+Now we can see that the relation~\eqref{eq:cube_identity}
+we got via interpolation of cubes
+can be generalized for all non-negative odd-powers $2m+1$ by constructing
+and solving a certain system of linear equations.
+Therefore, the generalized form of odd-power identity has the form
+\begin{equation}
+    n^{2m+1} = \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} (n-k)^{r}\label{eq:odd-power-identity}
+\end{equation}
+where $\coeffA{m}{r}$ are real coefficients.
+In more details, the identity~\eqref{eq:odd-power-identity} is discussed
+separately in~\cite{kolosov2022106, kolosov2023polynomial}.
+
+As one more example, let be $m=3$ so that we have the following relation defined by~\eqref{eq:odd-power-identity}
+\begin{equation*}
+    \coeffA{m}{0} n
+    + \coeffA{m}{1} \left[ \frac{1}{6} (-n + n^3) \right]
+    + \coeffA{m}{2} \left[ \frac{1}{30} (-n + n^5) \right]
+    + \coeffA{m}{3} \left[ \frac{1}{420} (-10 n + 7 n^3 + 3 n^7) \right] - n^7 = 0
+\end{equation*}
+Multiplying by $420$ right-hand side and left-hand side, we get
+\begin{equation*}
+    420 \coeffA{3}{0} n + 70 \coeffA{2}{1} (-n + n^3) + 14 \coeffA{2}{2} (-n + n^5) + \coeffA{3}{3} (-10 n + 7 n^3 + 3 n^7) - 420n^7 = 0
+\end{equation*}
+Expanding brackets and rearranging the terms gives
+\begin{equation*}
+    \begin{split}
+        420 \coeffA{3}{0} n
+        &- 70 \coeffA{3}{1} + 70 \coeffA{3}{1} n^3 - 14 \coeffA{3}{2} n + 14 \coeffA{3}{2} n^5 \\
+        &- 10 \coeffA{3}{3} n + 7 \coeffA{3}{3} n^3 + 3 \coeffA{3}{3} n^7 - 420n^7 = 0
+    \end{split}
+\end{equation*}
+Combining the common terms yields
+\begin{equation*}
+    \begin{split}
+        &n (420 \coeffA{3}{0} - 70 \coeffA{3}{1} - 14 \coeffA{3}{2} - 10 \coeffA{3}{3}) \\
+        &+ n^3 (70 \coeffA{3}{1} + 7 \coeffA{3}{3})
+        + n^5 14 \coeffA{3}{2}
+        + n^7 (3 \coeffA{3}{3} - 420)
+        = 0
+    \end{split}
+\end{equation*}
+Therefore, the system of linear equations follows
+\begin{equation*}
+    \begin{cases}
+        420 \coeffA{3}{0} - 70 \coeffA{3}{1} - 14 \coeffA{3}{2} - 10 \coeffA{3}{3} = 0 \\
+        70 \coeffA{3}{1} + 7 \coeffA{3}{3} = 0 \\
+        \coeffA{3}{2} - 30 = 0 \\
+        3 \coeffA{3}{3} - 420 = 0
+    \end{cases}
+\end{equation*}
+Solving it, we get
+\begin{equation*}
+    \begin{cases}
+        \coeffA{3}{3} = 140 \\
+        \coeffA{3}{2} = 0 \\
+        \coeffA{3}{1} = -\frac{7}{70} \coeffA{3}{3} = -14 \\
+        \coeffA{3}{0} = \frac{(70 \coeffA{3}{1} + 10 \coeffA{3}{3})}{420} = 1
+    \end{cases}
+\end{equation*}
+So that odd-power identity~\eqref{eq:odd-power-identity} holds
+\begin{equation*}
+    n^7 = \sum_{k=1}^{n} 140 k^3 (n-k)^3 - 14k(n-k) + 1
+\end{equation*}
+It is also clearly seen
+why the above identity is true evaluating the terms $140 k^3 (n-k)^3 - 14k(n-k) + 1$ over $0 \leq k \leq n$ as
+the OEIS sequence \href{https://oeis.org/A300785}{\texttt{A300785}}~\cite{kolosov2018seventh} shows.
+\input{sections/figures/04_fig_triangle_row_sums_give_seventh_power}

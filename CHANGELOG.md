@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2024-10
+
+### Changed
+
+- Update discussion about coefficients A
+- Split manuscript by subsections
+- Add numerical triangle such that row sums give seventh powers
+- Add question environment
+- Add assumption environment
+- Update future research
+- Move figures to separate files
+
 ## [1.1.5] - 2024-09-27
 
 ### Changed
