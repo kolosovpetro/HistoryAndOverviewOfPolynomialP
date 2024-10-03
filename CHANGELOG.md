@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Add assumption environment
 - Update future research
 - Move figures to separate files
+- Update related works
 
 ## [1.1.5] - 2024-09-27
 
