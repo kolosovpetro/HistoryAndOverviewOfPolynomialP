@@ -66,24 +66,7 @@ So that the odd-power identity holds
 It is also clearly seen
 why the above identity is true by arranging the terms $30k^2(n-k)^2 + 1$ over $0 \leq k \leq n$ as tabular.
 See the OEIS sequence~\cite{kolosov2018fifth}
-\begin{table}[H]
-    \setlength\extrarowheight{-6pt}
-    \begin{tabular}{c|cccccccc}
-        $n/k$ & 0 & 1    & 2    & 3    & 4    & 5    & 6    & 7 \\
-        \hline
-        0     & 1 &      &      &      &      &      &      &   \\
-        1     & 1 & 1    &      &      &      &      &      &   \\
-        2     & 1 & 31   & 1    &      &      &      &      &   \\
-        3     & 1 & 121  & 121  & 1    &      &      &      &   \\
-        4     & 1 & 271  & 481  & 271  & 1    &      &      &   \\
-        5     & 1 & 481  & 1081 & 1081 & 481  & 1    &      &   \\
-        6     & 1 & 751  & 1921 & 2431 & 1921 & 751  & 1    &   \\
-        7     & 1 & 1081 & 3001 & 4321 & 4321 & 3001 & 1081 & 1
-    \end{tabular}
-    \caption{Values of $30k^2(n-k)^2 + 1$.
-    See the OEIS entry \href{https://oeis.org/A300656}{\texttt{A300656}}.}
-    \label{tab:row-sums-gives-fifth-power}
-\end{table}
+\input{sections/figures/03_fig_triangle_row_sums_give_fifth_power}
 
 Now we can see that the relation~\eqref{eq:cube_identity}
 we got via interpolation of cubes
@@ -151,21 +134,4 @@ So that odd-power identity~\eqref{eq:odd-power-identity} holds
 It is also clearly seen
 why the above identity is true evaluating the terms $140 k^3 (n-k)^3 - 14k(n-k) + 1$ over $0 \leq k \leq n$ as
 the OEIS sequence \href{https://oeis.org/A300785}{\texttt{A300785}}~\cite{kolosov2018seventh} shows.
-\begin{table}[H]
-    \setlength\extrarowheight{-6pt}
-    \begin{tabular}{c|cccccccc}
-        $n/k$ & 0 & 1     & 2      & 3      & 4      & 5      & 6     & 7 \\
-        \hline
-        0     & 1 &       &        &        &        &        &       &   \\
-        1     & 1 & 1     &        &        &        &        &       &   \\
-        2     & 1 & 127   & 1      &        &        &        &       &   \\
-        3     & 1 & 1093  & 1093   & 1      &        &        &       &   \\
-        4     & 1 & 3739  & 8905   & 3739   & 1      &        &       &   \\
-        5     & 1 & 8905  & 30157  & 30157  & 8905   & 1      &       &   \\
-        6     & 1 & 17431 & 71569  & 101935 & 71569  & 17431  & 1     &   \\
-        7     & 1 & 30157 & 139861 & 241753 & 241753 & 139861 & 30157 & 1
-    \end{tabular}
-    \caption{Values of $140 k^3 (n-k)^3 - 14k(n-k) + 1$.
-    See the OEIS entry \href{https://oeis.org/A300785}{\texttt{A300785}}.}
-    \label{tab:row-sums-gives-seventh-power}
-\end{table}
+\input{sections/figures/04_fig_triangle_row_sums_give_seventh_power}
