@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Add numerical triangle such that row sums give seventh powers
 - Add question environment
 - Add assumption environment
+- Update future research
 
 ## [1.1.5] - 2024-09-27
 

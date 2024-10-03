@@ -16,7 +16,7 @@
     It is worth to get a closer look into it so that new relations in terms of discrete convolution may be found.
     \item All kinds of derivatives e.g.\ forward, backward and central, including the derivatives on time-scales can be expressed
     as double limit of $\polynomialP{m}{b}{x}$ extending the results of~\cite{kolosov_2024_10575485}.
-    \item Introducing the definitions of  the coefficients
+    \item Introducing the definitions of the coefficients
     $\brackCoefficient{n}{k}{m}$ and $\braceCoefficient{n}{k}{m}$
     \begin{align*}
         \brackCoefficient{n}{k}{m} &= \sum_{r=0}^{m} \coeffA{m}{r} k^r (n-k)^r \\
@@ -30,6 +30,12 @@
     \end{align*}
     so that combinatorial sense of above is also a topic to research.
     \item Contribute new OEIS sequences related to $\brackCoefficient{n}{k}{m}$ and $\braceCoefficient{n}{k}{m}$.
+    \item An identity
+    \begin{align*}
+    (x-2a)
+        ^{2m+1} = \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=a+1}^{x-a} (k-a)^r (x-k-a)^r
+    \end{align*}
+    allows to provide a novel proof of power rule in terms of derivatives of polynomials.
     \item Following the results of~\url{https://arxiv.org/pdf/1603.02468v15.pdf},
     the equation~\eqref{eq:definition_polynomial_p} approximates the odd-power polynomial $x^{2m+1}$ around given points
     $x_i$ as it may be observed from the following plots
