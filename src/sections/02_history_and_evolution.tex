@@ -2,11 +2,15 @@ Back then, in 2016 being a student at the faculty of mechanical engineering,
 I remember myself playing with finite differences of the polynomial $n^3$ over the domain of natural numbers $n\in\mathbb{N}$
 having at most $0 \leq n \leq 20$ values.
 Looking to the values in my finite difference tables, the first and very naive question that came to my mind was
-\begin{center}
-    \textit{Is it possible to re-assemble the value of
-    the polynomial $n^3$ backwards having its finite differences?}
-\end{center}
-The answer to this question is definitely \textit{Yes}, utilizing the interpolation principles.
+%\begin{center}
+%    \textit{Is it possible to re-assemble the value of
+%    the polynomial $n^3$ backwards having its finite differences?}
+%\end{center}
+\begin{question}
+    Is it possible to re-assemble the value of the polynomial $n^3$ backwards
+    having its finite differences?
+\end{question}
+The answer to this question is definitely \textit{Yes}, by utilizing certain interpolation principles.
 Interpolation is a process of finding new data points based on the range of a discrete set of known data points.
 Interpolation has been well-developed in between 1674--1684
 by Issac Newton's fundamental works, nowadays known as foundation of classical interpolation
@@ -109,13 +113,28 @@ It is immediately seen that~\eqref{eq:cube_identity} is true by observing the ta
 \end{table}
 Therefore, we have reached our base case by successfully interpolating the polynomial $n^3$.
 Fairly enough that the next curiosity would be
-\begin{center}
-    \textit{Well, if the relation~\eqref{eq:cube_identity} true for the polynomial $n^3$,
-        then is it true that~\eqref{eq:cube_identity} can be generalized for higher powers, e.g. for $n^4$ or $n^5$ either?}
-\end{center}
-That was my next question, however without any expectation of the final form of generalized relation.
+\begin{question}
+    Well, if the relation~\eqref{eq:cube_identity} true for the polynomial $n^3$,
+    then is it true that~\eqref{eq:cube_identity} can be generalized for higher powers, e.g.\ for $n^4$ or $n^5$ similarly?
+    \label{question:higher_powers}
+\end{question}
+That was the next question, however without any expectation of the final form of generalized relation.
+Going a little further, the answer to this question is also \textit{Yes}, by utilizing certain approaches
+in terms of recurrence relations and systems of linear equations.
+Let us begin with the background and history review of systems of linear equations approach.
 
 \input{sections/subsections/01_system_of_linear_equations_approach}
+
+However, constructing and solving a system of linear equations for every odd-power $2m+1$ requires a huge effort
+\begin{assumption}
+    There must be a formula that generates a set of real coefficients $\coeffA{m}{0},\coeffA{m}{0}, \dots \coeffA{m}{m}$
+    for each fixed $m$ such that
+    \begin{align*}
+        n^{2m+1} = \sum_{r=0}^{m} \coeffA{m}{r} \sum_{k=1}^{n} k^{r} (n-k)^{r}
+    \end{align*}
+\end{assumption}
+I thought.
+
 \input{sections/subsections/02_recurrence_relation_approach}
 
 Finally, we got our road to definition of $2m+1$-degree polynomial $\polynomialP{m}{b}{x}$.
