@@ -196,7 +196,7 @@ See the OEIS sequence~\cite{kolosov2018fifth}
         7     & 1 & 1081 & 3001 & 4321 & 4321 & 3001 & 1081 & 1
     \end{tabular}
     \caption{Values of $30k^2(n-k)^2 + 1$.
-    See the OEIS entry \href{https://oeis.org/A300656}{\texttt{A300656}}}
+    See the OEIS entry \href{https://oeis.org/A300656}{\texttt{A300656}}.}
     \label{tab:row-sums-gives-fifth-power}
 \end{table}
 
@@ -217,18 +217,18 @@ there must be a formula that generates a set of real coefficients $\coeffA{m}{r}
 As it turned out, that assumption was correct.
 So that I reached MathOverflow community in search of answers that arrived quite shortly.
 In~\cite{alekseyev2018mathoverflow}, Dr. Max Alekseyev has provided a complete and comprehensive formula to calculate
-coefficient $\coeffA{m}{r}$ for each natural $m\geq 0, \; 0 \leq r \leq m$.
+coefficient $\coeffA{m}{r}$ for each natural $m,r$ such that $m\geq 0$ and $0 \leq r \leq m$.
 The main idea of Alekseyev's approach was to utilize dynamic programming methods to evaluate the $\coeffA{m}{r}$ recursively,
-taking base case $\coeffA{m}{m}$ then evaluating the next coefficient $\coeffA{m}{m-1}$ via backtracking,
-continuing similarly up to $\coeffA{m}{0}$.
+taking the base case $\coeffA{m}{m}$ and then evaluating the next coefficient $\coeffA{m}{m-1}$
+by using backtracking, continuing similarly up to $\coeffA{m}{0}$.
 Before we consider the derivation of the recurrent formula for coefficients $\coeffA{m}{r}$,
 a few words must be said regarding the Faulhaber's formula~\cite{beardon1996sums}
 \begin{equation*}
     \sum_{k=1}^{n} k^{p} = \frac{1}{p+1}\sum_{j=0}^{p} \binom{p+1}{j} \bernoulli{j} n^{p+1-j}
 \end{equation*}
-it is important to notice that iteration step $j$ is bounded by the value of exponent $p$,
-while the upper bound of the binomial coefficient is $p+1$.
-That means we cannot omit summation bounds letting $j$ run over infinity,
+it is important to notice that iteration step $j$ is bounded by the value of power $p$,
+while the upper index of the binomial coefficient $\binom{p+1}{j}$ is $p+1$.
+It means that we cannot omit summation bounds letting $j$ run over infinity,
 unless we perform the following action on the Faulhaber's formula
 \begin{equation}
     \begin{split}
@@ -240,19 +240,26 @@ unless we perform the following action on the Faulhaber's formula
 \end{equation}
 At this point we are good to go through the entire derivation of the recurrent formula for
 coefficients $\coeffA{m}{r}$.
-Applying both Binomial theorem and Faulhaber's formula~\eqref{eq:faulhabers-formula}
+By applying Binomial theorem $(n-k)^r=\sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} k^t$ and Faulhaber's formula~\eqref{eq:faulhabers-formula}
 to the equation~\eqref{eq:odd-power-identity} we get
-\begin{equation*}
-    \begin{split}
-        &\sum_{k=1}^{n} k^{r} (n-k)^{r}
-        = \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \\
-        &= \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \left[ \frac{1}{t+r+1} \sum_{j} \binom{t+r+1}{j} \bernoulli{j} n^{t+r+1-j} - \bernoulli{t+r+1} \right] \\
-        &= \sum_{t=0}^{r} \binom{r}{t} \left[ \frac{(-1)^t}{t+r+1} \sum_{j} \binom{t+r+1}{j} \bernoulli{j} n^{2r+1-j} - \bernoulli{t+r+1} n^{r-t} \right] \\
-        &= \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \sum_{j} \binom{t+r+1}{j} \bernoulli{j} n^{2r+1-j} - \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t} \\
-        &= \sum_{j} \sum_{t} \binom{r}{t} \frac{(-1)^t}{t+r+1} \binom{t+r+1}{j} \bernoulli{j} n^{2r+1-j} - \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t} \\
-        &= \sum_{j} \bernoulli{j} n^{2r+1-j} \sum_{t} \binom{r}{t} \frac{(-1)^t}{t+r+1} \binom{t+r+1}{j} - \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t}
-    \end{split}
-\end{equation*}
+\begin{align*}
+    &\sum_{k=1}^{n} k^{r} (n-k)^{r}
+    = \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \sum_{k=1}^{n} k^{t+r} \\
+    &= \sum_{t=0}^{r} (-1)^t \binom{r}{t} n^{r-t} \left[ \frac{1}{t+r+1} \sum_{j} \binom{t+r+1}{j} \bernoulli{j} n^{t+r+1-j} - \bernoulli{t+r+1} \right] \\
+    &= \sum_{t=0}^{r} \binom{r}{t} \left[ \frac{(-1)^t}{t+r+1} \sum_{j} \binom{t+r+1}{j} \bernoulli{j} n^{2r+1-j} - \bernoulli{t+r+1} n^{r-t} \right] \\
+    &= \left[ \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \sum_{j} \binom{t+r+1}{j} \bernoulli{j} n^{2r+1-j}  \right]
+    - \left[ \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t} \right] \\
+    &= \left[ \sum_{j} \sum_{t} \binom{r}{t} \frac{(-1)^t}{t+r+1} \binom{t+r+1}{j} \bernoulli{j} n^{2r+1-j}  \right]
+    - \left[ \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t} \right]
+    %&= \left[ \sum_{j} \bernoulli{j} n^{2r+1-j} \sum_{t} \binom{r}{t} \frac{(-1)^t}{t+r+1} \binom{t+r+1}{j}  \right]
+    %- \left[ \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t} \right]
+\end{align*}
+Rearranging terms yields
+\begin{equation}
+    \left[ \sum_{j} \bernoulli{j} n^{2r+1-j} \sum_{t} \binom{r}{t} \frac{(-1)^t}{t+r+1} \binom{t+r+1}{j}  \right]
+    - \left[ \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t} \right]
+    \label{eq:rearranging-terms}
+\end{equation}
 We can notice that
 \begin{equation}
     \sum_{t} \binom{r}{t} \frac{(-1)^t}{r+t+1} \binom{r+t+1}{j}
@@ -262,9 +269,8 @@ We can notice that
     \end{cases}\label{eq:combinatorial-identity}
 \end{equation}
 An elegant proof of the binomial identity~\eqref{eq:combinatorial-identity} is presented in~\cite{scheuer2023mathstackexchange}.
-
 In particular, the equation~\eqref{eq:combinatorial-identity} is zero for $0< t \leq j$.
-So that taking $j=0$ we have
+So that moving $j=0$ out of summation in~\eqref{eq:rearranging-terms} we have
 \begin{equation*}
     \begin{split}
         \sum_{k=1}^{n} k^{r} (n-k)^{r}
@@ -272,7 +278,7 @@ So that taking $j=0$ we have
         &- \left[ \sum_{t=0}^{r} \binom{r}{t} \frac{(-1)^t}{t+r+1} \bernoulli{t+r+1} n^{r-t} \right]
     \end{split}
 \end{equation*}
-Simplifying above equation via~\eqref{eq:combinatorial-identity} we get
+Simplifying above equation by using~\eqref{eq:combinatorial-identity} yields
 \begin{equation*}
     \begin{split}
         \sum_{k=1}^{n} k^{r} (n-k)^{r}
@@ -295,30 +301,39 @@ we collapse the common terms in the equation above so that
 Assuming that $\coeffA{m}{r}$ is defined by~\eqref{eq:odd-power-identity},
 we obtain the following relation for polynomials in $n$
 \begin{equation*}
-    \sum_{r} \coeffA{m}{r} \frac{1}{(2r+1) \binom{2r}r} n^{2r+1}
-    + 2 \sum_{r} \coeffA{m}{r} \sum_{\mathrm{odd \; \ell}} \frac{(-1)^r}{2r+1-\ell} \binom{r}{\ell} \bernoulli{2r+1-\ell} n^{\ell}
+    \sum_{r=0}^{m} \coeffA{m}{r} \frac{1}{(2r+1) \binom{2r}r} n^{2r+1}
+    + 2 \sum_{r=0}^{m} \coeffA{m}{r} \sum_{\mathrm{odd \; \ell}} \frac{(-1)^r}{2r+1-\ell} \binom{r}{\ell} \bernoulli{2r+1-\ell} n^{\ell}
     \equiv n^{2m+1}
 \end{equation*}
 Replacing odd $\ell$ by $d$ we get
+\begin{align*}
+    \sum_{r=0}^{m} \coeffA{m}{r} \frac{1}{(2r+1) \binom{2r}r} n^{2r+1}
+    + 2 \sum_{r=0}^{m} \coeffA{m}{r} \sum_{d \geq 0} \frac{(-1)^r}{2r-2d} \binom{r}{2d+1} \bernoulli{2r-2d} n^{2d+1}
+    \equiv n^{2m+1}
+\end{align*}
+Therefore,
 \begin{equation}
     \begin{split}
-        &\sum_{r} \coeffA{m}{r} \frac{1}{(2r+1) \binom{2r}r} n^{2r+1}
-        + 2 \sum_{r} \coeffA{m}{r} \sum_{d} \frac{(-1)^r}{2r-2d} \binom{r}{2d+1} \bernoulli{2r-2d} n^{2d+1}
-        \equiv n^{2m+1} \\
-        &\sum_{r} \coeffA{m}{r} \left[ \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} \right]
-        + 2 \sum_{r} \coeffA{m}{r} \left[ \sum_{d} \frac{(-1)^r}{2r-2d} \binom{r}{2d+1} \bernoulli{2r-2d} n^{2d+1} \right]
-        - n^{2m+1} = 0
-    \end{split}\label{eq:equation7}
+        \sum_{r=0}^{m} \coeffA{m}{r} \left[ \frac{1}{(2r+1) \binom{2r}r} n^{2r+1} \right]
+        &+ 2 \sum_{r=0}^{m} \coeffA{m}{r} \left[ \sum_{d \geq 0} \frac{(-1)^r}{2r-2d} \binom{r}{2d+1} \bernoulli{2r-2d} n^{2d+1} \right] \\
+        &\equiv n^{2m+1}
+    \end{split}
+    \label{eq:equation7}
 \end{equation}
-Let be $r=m$, then taking the coefficient of $n^{2m+1}$ in~\eqref{eq:equation7} we get
+Taking the coefficient of $n^{2m+1}$ we set iteration steps $r=m$ and $d=m$ in~\eqref{eq:equation7} to get
 \begin{equation*}
     \coeffA{m}{m} = (2m+1)\binom{2m}{m}
 \end{equation*}
-and taking the coefficient of $n^{2d+1}$ for an integer $d$ in the range $m/2 \leq d < m$, we get
+Note that $\binom{r}{2d+1}=0$ in~\eqref{eq:equation7} having $r=m$ and $d=m$.
+
+Taking the coefficient of $n^{2d+1}$ for an integer $d$ in the range $\frac{m}{2} \leq d < m$, we get
 \begin{equation*}
     \coeffA{m}{d} = 0
 \end{equation*}
-Taking the coefficient of $n^{2d+1}$ for $d$ in the range $m/4 \leq d < m/2$ we get
+because $\binom{r}{2d+1}$ is zero for every $r \leq m$ and $2d+1$ having $\frac{m}{2} \leq d < m$.
+For example $\binom{r}{m+1} = 0$ having $r \leq m$ and $d=\frac{m}{2}$.
+
+Taking the coefficient of $n^{2d+1}$ for $d$ in the range $\frac{m}{4} \leq d < \frac{m}{2}$ we get
 \begin{equation*}
     \coeffA{m}{d} \frac{1}{(2d+1) \binom{2d}{d}}
     +2 (2m+1) \binom{2m}{m}\binom{m}{2d+1} \frac{(-1)^m}{2m-2d} \bernoulli{2m-2d} = 0
@@ -327,18 +342,18 @@ i.e
 \begin{equation*}
     \coeffA{m}{d} = (-1)^{m-1} \frac{(2m+1)!}{d!d!m!(m-2d-1)!} \frac{1}{m-d} \bernoulli{2m-2d}
 \end{equation*}
-Continue similarly we can compute $\coeffA{m}{r}$ for each integer $r$ in range $m/2^{s+1}\leq r < m/2^s$
-(iterating consecutively $s=1,2,\ldots$) via previously determined values of $\coeffA{m}{d}$ as follows
+Continue similarly we can compute $\coeffA{m}{r}$ for each integer $r$ in range $\frac{m}{2^{s+1}} \leq r < \frac{m}{2^{s}}$,
+iterating consecutively over $s=1,2,\ldots$ by using previously determined values of $\coeffA{m}{d}$ as follows
 \begin{equation*}
     \coeffA{m}{r} =
     (2r+1) \binom{2r}{r} \sum_{d \geq 2r+1}^{m} \coeffA{m}{d} \binom{d}{2r+1} \frac{(-1)^{d-1}}{d-r}
     \bernoulli{2d-2r}
 \end{equation*}
-Finally, we are capable to define the coefficient $\coeffA{m}{r}$ via the next recurrent relation
-\begin{defn} (Definition of the real coefficients $\coeffA{m}{r}$.)
+Finally, we are capable to define the following recurrence relation for coefficient $\coeffA{m}{r}$
+\begin{defn} (Definition of coefficient $\coeffA{m}{r}$.)
     \begin{equation}
         \label{eq:definition_coefficient_a}
-        \coeffA{m}{r} \colonequals
+        \coeffA{m}{r} =
         \begin{cases}
         (2r+1)
             \binom{2r}{r} & \mathrm{if} \; r=m \\
@@ -367,7 +382,7 @@ For example,
             7     & 1 & -450054 & 491400 & -60060 & 0   & 0    & 0     & 51480
         \end{tabular}
     \end{center}
-    \caption{Coefficients $\coeffA{m}{r}$.}
+    \caption{Coefficients $\coeffA{m}{r}$. See OEIS sequences~\cite{kolosov2018numerator,kolosov2018denominator}.}
     \label{tab:table_of_coefficients_a}
 \end{table}
 The nominators and denominators of the coefficients $\coeffA{m}{r}$ are also registered as sequences
@@ -401,17 +416,17 @@ In 2023, Albert Tkaczyk yet again extended the theorem~\eqref{eq:odd-power-theor
 so that it gives polynomials of the form $n^{3l+2}$ at~\cite{albert_tkaczyk_2023_8371454}.
 For example,
 \begin{align*}
-        \polynomialP{0}{b}{x}
-        &=b, \\
-        \polynomialP{1}{b}{x}
-        &=3 b^2 - 2 b^3 - 3 b x + 3 b^2 x, \\
-        \polynomialP{2}{b}{x}
-        &=10 b^3 - 15 b^4 + 6 b^5 \\
-        &- 15 b^2 x + 30 b^3 x - 15 b^4 x \\
-        &+ 5 b x^2 - 15 b^2 x^2 + 10 b^3 x^2 \\
-        \polynomialP{3}{b}{x}
-        &=-7 b^2 + 28 b^3 - 70 b^5 + 70 b^6 - 20 b^7 \\
-        &+ 7 b x - 42 b^2 x + 175 b^4 x - 210 b^5 x + 70 b^6 x \\
-        &+ 14 b x^2 - 140 b^3 x^2 + 210 b^4 x^2 - 84 b^5 x^2 \\
-        &+ 35 b^2 x^3 - 70 b^3 x^3 + 35 b^4 x^3
+    \polynomialP{0}{b}{x}
+    &=b, \\
+    \polynomialP{1}{b}{x}
+    &=3 b^2 - 2 b^3 - 3 b x + 3 b^2 x, \\
+    \polynomialP{2}{b}{x}
+    &=10 b^3 - 15 b^4 + 6 b^5 \\
+    &- 15 b^2 x + 30 b^3 x - 15 b^4 x \\
+    &+ 5 b x^2 - 15 b^2 x^2 + 10 b^3 x^2 \\
+    \polynomialP{3}{b}{x}
+    &=-7 b^2 + 28 b^3 - 70 b^5 + 70 b^6 - 20 b^7 \\
+    &+ 7 b x - 42 b^2 x + 175 b^4 x - 210 b^5 x + 70 b^6 x \\
+    &+ 14 b x^2 - 140 b^3 x^2 + 210 b^4 x^2 - 84 b^5 x^2 \\
+    &+ 35 b^2 x^3 - 70 b^3 x^3 + 35 b^4 x^3
 \end{align*}
