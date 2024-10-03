@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec/v2.0.0.html).
 
-## [1.2.0] - 2024-10
+## [1.2.0] - 2024-10-03
 
 ### Changed
 
@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Move figures to separate files
 - Update related works
 - Update related works graph
+- Add properties of the coefficients A
 
 ## [1.1.5] - 2024-09-27
 
