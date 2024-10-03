@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 ### Changed
 
 - Update discussion about coefficients A
+- Split manuscript by subsections
+- Add numerical triangle such that row sums give seventh powers
 
 ## [1.1.5] - 2024-09-27
 
