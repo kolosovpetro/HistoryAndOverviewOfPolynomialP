@@ -26,18 +26,6 @@ Petro Kolosov.
   On-Line Encyclopedia of Integer Sequences}.
 \newblock Published electronically at \url{https://oeis.org/A287326}, 2017.
 
-\bibitem{kolosov2018fifth}
-Petro Kolosov.
-\newblock {Numerical triangle, row sums give fifth power, Entry A300656 in The
-  On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A300656}, 2018.
-
-\bibitem{kolosov2018seventh}
-Petro Kolosov.
-\newblock {Numerical triangle, row sums give seventh power, Entry A300785 in
-  The On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A300785}, 2018.
-
 \bibitem{tkaczyk2018problem}
 {Tkaczyk, Albert}.
 \newblock {About the problem of a triangle developing the polynomial function}.
@@ -53,6 +41,12 @@ Petro Kolosov.
   \href{https://www.linkedin.com/pulse/problem-triangle-developing-polynomial-function-f-n-m-albert-tkaczyk/}{\texttt{LinkedIn}},
   2018.
 
+\bibitem{kolosov2018fifth}
+Petro Kolosov.
+\newblock {Numerical triangle, row sums give fifth power, Entry A300656 in The
+  On-Line Encyclopedia of Integer Sequences}.
+\newblock Published electronically at \url{https://oeis.org/A300656}, 2018.
+
 \bibitem{kolosov2022106}
 {Kolosov, Petro}.
 \newblock {106.37 An unusual identity for odd-powers}.
@@ -66,6 +60,12 @@ Petro Kolosov.
 \newblock Published electronically at
   \url{https://kolosovpetro.github.io/pdf/PolynomialIdentityInvolvingBTandFaulhaber.pdf},
   2023.
+
+\bibitem{kolosov2018seventh}
+Petro Kolosov.
+\newblock {Numerical triangle, row sums give seventh power, Entry A300785 in
+  The On-Line Encyclopedia of Integer Sequences}.
+\newblock Published electronically at \url{https://oeis.org/A300785}, 2018.
 
 \bibitem{alekseyev2018mathoverflow}
 {Alekseyev, Max}.
@@ -106,12 +106,6 @@ Albert Tkaczyk.
   f(n)=n\^m}, September 2023.
 \newblock \url{https://doi.org/10.5281/zenodo.8371454}.
 
-\bibitem{kolosov2023another}
-Petro Kolosov.
-\newblock Another approach to get derivative of odd-power.
-\newblock {\em arXiv preprint arXiv:2310.07804}, 2023.
-\newblock \url{https://arxiv.org/abs/2310.07804}.
-
 \bibitem{kolosov2016study}
 Petro Kolosov.
 \newblock A study on partial dynamic equation on time scales involving
@@ -119,11 +113,11 @@ Petro Kolosov.
 \newblock {\em arXiv preprint arXiv:1608.00801}, 2016.
 \newblock \url{https://arxiv.org/abs/1608.00801}.
 
-\bibitem{kolosov_2024_10575485}
+\bibitem{kolosov2023another}
 Petro Kolosov.
-\newblock {Finding the derivative of polynomials via double limit}, January
-  2024.
-\newblock \url{https://doi.org/10.5281/zenodo.10575485}.
+\newblock Another approach to get derivative of odd-power.
+\newblock {\em arXiv preprint arXiv:2310.07804}, 2023.
+\newblock \url{https://arxiv.org/abs/2310.07804}.
 
 \bibitem{barbero2020two}
 J.~Fernando Barbero~G., Juan Margalef-Bentabol, and Eduardo~J.S.
@@ -131,6 +125,12 @@ J.~Fernando Barbero~G., Juan Margalef-Bentabol, and Eduardo~J.S.
 \newblock {A two-sided Faulhaber-like formula involving Bernoulli polynomials}.
 \newblock {\em Comptes Rendus. Math{\'e}matique}, 358(1):41--44, 2020.
 \newblock \url{https://doi.org/10.5802/crmath.10}.
+
+\bibitem{kolosov_2024_10575485}
+Petro Kolosov.
+\newblock {Finding the derivative of polynomials via double limit}, January
+  2024.
+\newblock \url{https://doi.org/10.5281/zenodo.10575485}.
 
 \bibitem{kolosov2018coefficientspolynomial1}
 Petro Kolosov.
