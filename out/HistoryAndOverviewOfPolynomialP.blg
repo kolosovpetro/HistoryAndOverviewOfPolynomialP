@@ -5,36 +5,40 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 32 items.
 Database file #1: HistoryAndOverviewOfPolynomialP.bib
+"{" immediately follows a field part---line 193 of file HistoryAndOverviewOfPolynomialP.bib
+ :     note = \url
+ :                {https://kolosovpetro.github.io/pdf/PolynomialIdentityInvolvingBTandFaulhaber.pdf},
+I'm skipping whatever remains of this entry
 You've used 24 entries,
             1791 wiz_defined-function locations,
-            576 strings with 8330 characters,
-and the built_in function-call counts, 3608 in all, are:
-= -- 320
-> -- 110
+            575 strings with 8028 characters,
+and the built_in function-call counts, 3546 in all, are:
+= -- 307
+> -- 103
 < -- 1
-+ -- 52
-- -- 28
-* -- 113
-:= -- 579
-add.period$ -- 78
++ -- 50
+- -- 26
+* -- 107
+:= -- 561
+add.period$ -- 77
 call.type$ -- 24
 change.case$ -- 23
 chr.to.int$ -- 0
 cite$ -- 24
 duplicate$ -- 150
 empty$ -- 444
-format.name$ -- 28
-if$ -- 824
+format.name$ -- 26
+if$ -- 806
 int.to.chr$ -- 0
 int.to.str$ -- 24
 missing$ -- 9
-newline$ -- 129
+newline$ -- 128
 num.names$ -- 24
-pop$ -- 114
+pop$ -- 121
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 72
+skip$ -- 76
 stack$ -- 0
 substring$ -- 94
 swap$ -- 25
@@ -45,4 +49,5 @@ type$ -- 0
 warning$ -- 0
 while$ -- 32
 width$ -- 26
-write$ -- 259
+write$ -- 256
+(There was 1 error message)
