@@ -16,22 +16,22 @@ Alan~F. Beardon.
   \url{https://les-mathematiques.net/vanilla/uploads/editor/5w/3wm5emwr0i7p.pdf}.
 
 \bibitem{abramowitz1988handbook}
-Milton Abramowitz, Irene~A. Stegun, and Robert~H. Romer.
-\newblock Handbook of mathematical functions with formulas, graphs, and
-  mathematical tables, 1988.
+{Abramowitz, Milton and Stegun, Irene A. and Romer, Robert H.}
+\newblock {Handbook of mathematical functions with formulas, graphs, and
+  mathematical tables}, 1988.
 
 \bibitem{kolosov2017third}
 Petro Kolosov.
 \newblock {Numerical triangle, row sums give third power, Entry A287326 in The
-  On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A287326}, 2017.
+  On-Line Encyclopedia of Integer Sequences}, 2017.
+\newblock \url{https://oeis.org/A287326}.
 
 \bibitem{tkaczyk2018problem}
 {Tkaczyk, Albert}.
-\newblock {About the problem of a triangle developing the polynomial function}.
-\newblock Published electronically at
-  \href{https://www.linkedin.com/pulse/problem-triangle-developing-polynomial-function-fn-nm-albert-tkaczyk/}{\texttt{LinkedIn}},
+\newblock {About the problem of a triangle developing the polynomial function},
   2018.
+\newblock Published electronically at
+  \href{https://www.linkedin.com/pulse/problem-triangle-developing-polynomial-function-fn-nm-albert-tkaczyk/}{\texttt{LinkedIn}}.
 
 \bibitem{tkaczyk2018continuation}
 {Tkaczyk, Albert}.
@@ -44,8 +44,8 @@ Petro Kolosov.
 \bibitem{kolosov2018fifth}
 Petro Kolosov.
 \newblock {Numerical triangle, row sums give fifth power, Entry A300656 in The
-  On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A300656}, 2018.
+  On-Line Encyclopedia of Integer Sequences}, 2018.
+\newblock \url{https://oeis.org/A300656}.
 
 \bibitem{kolosov2022106}
 {Kolosov, Petro}.
@@ -56,43 +56,42 @@ Petro Kolosov.
 \bibitem{kolosov2023polynomial}
 Petro Kolosov.
 \newblock {Polynomial identity involving Binomial Theorem and Faulhaber's
-  formula}.
-\newblock Published electronically at
-  \url{https://kolosovpetro.github.io/pdf/PolynomialIdentityInvolvingBTandFaulhaber.pdf},
-  2023.
+  formula}, 2023.
+\newblock
+  \url{https://kolosovpetro.github.io/pdf/PolynomialIdentityInvolvingBTandFaulhaber.pdf}.
 
 \bibitem{kolosov2018seventh}
 Petro Kolosov.
 \newblock {Numerical triangle, row sums give seventh power, Entry A300785 in
-  The On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A300785}, 2018.
+  The On-Line Encyclopedia of Integer Sequences}, 2018.
+\newblock \url{https://oeis.org/A300785}.
 
 \bibitem{alekseyev2018mathoverflow}
 {Alekseyev, Max}.
-\newblock {MathOverflow answer 297916/113033}.
-\newblock Published electronically at
-  \url{https://mathoverflow.net/a/297916/113033}, 2018.
+\newblock {MathOverflow answer 297916/113033}, 2018.
+\newblock \url{https://mathoverflow.net/a/297916/113033}.
 
 \bibitem{scheuer2023mathstackexchange}
 {Scheuer, Markus}.
-\newblock {MathStackExchange answer 4724343/463487}.
-\newblock Published electronically at
-  \url{https://math.stackexchange.com/a/4724343/463487}, 2023.
+\newblock {MathStackExchange answer 4724343/463487}, 2023.
+\newblock \url{https://math.stackexchange.com/a/4724343/463487}.
 
 \bibitem{bateman1953higher}
 Harry Bateman.
 \newblock {\em {Higher transcendental functions [volumes i-iii]}}, volume~1.
-\newblock McGRAW-HILL book company, 1953.
+\newblock {McGRAW-HILL book company}, 1953.
 
 \bibitem{kolosov2018numerator}
 Petro Kolosov.
-\newblock {Entry A302971 in The On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A302971}, 2018.
+\newblock {Entry A302971 in The On-Line Encyclopedia of Integer Sequences},
+  2018.
+\newblock \url{https://oeis.org/A302971}.
 
 \bibitem{kolosov2018denominator}
 Petro Kolosov.
-\newblock {Entry A304042 in The On-Line Encyclopedia of Integer Sequences}.
-\newblock Published electronically at \url{https://oeis.org/A304042}, 2018.
+\newblock {Entry A304042 in The On-Line Encyclopedia of Integer Sequences},
+  2018.
+\newblock \url{https://oeis.org/A304042}.
 
 \bibitem{kolosov2016link}
 {Kolosov, Petro}.
