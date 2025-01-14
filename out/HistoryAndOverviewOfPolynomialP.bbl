@@ -132,22 +132,22 @@ Petro Kolosov.
 \newblock
   \url{https://kolosovpetro.github.io/pdf/FindingTheDerivativeOfPolynomialsViaDoubleLimit.pdf}.
 
-\bibitem{kolosov2018coefficientspolynomial1}
+\bibitem{oeis_coefficients_u_m_l_k_defined_by_polynomial_identity_1}
 Petro Kolosov.
-\newblock The coefficients u(m, l, k), m = 1 defined by the polynomial
-  identity, 2018.
+\newblock {The coefficients U(m, l, k), m = 1 defined by the polynomial
+  identity}, 2018.
 \newblock \url{https://oeis.org/A320047}.
 
-\bibitem{kolosov2018coefficientspolynomial2}
+\bibitem{oeis_coefficients_u_m_l_k_defined_by_polynomial_identity_2}
 Petro Kolosov.
-\newblock The coefficients u(m, l, k), m = 2 defined by the polynomial
-  identity, 2018.
+\newblock {The coefficients U(m, l, k), m = 2 defined by the polynomial
+  identity}, 2018.
 \newblock \url{https://oeis.org/A316349}.
 
-\bibitem{kolosov2018coefficientspolynomial3}
+\bibitem{oeis_coefficients_u_m_l_k_defined_by_polynomial_identity_3}
 Petro Kolosov.
-\newblock The coefficients u(m, l, k), m = 3 defined by the polynomial
-  identity, 2018.
+\newblock {The coefficients U(m, l, k), m = 3 defined by the polynomial
+  identity}, 2018.
 \newblock \url{https://oeis.org/A316387}.
 
 \end{thebibliography}
