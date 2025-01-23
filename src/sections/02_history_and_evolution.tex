@@ -6,18 +6,19 @@ Looking to the values in my finite difference tables, the first and very naive q
     Is it possible to re-assemble the value of the polynomial $n^3$ backwards
     having its finite differences?
 \end{question}
-The answer to this question is definitely \textit{Yes}, by utilizing certain interpolation principles.
+The answer to this question is certainly \textit{Yes}, by utilizing interpolation methods.
 Interpolation is a process of finding new data points based on the range of a discrete set of known data points.
-Interpolation has been well-developed in between 1674--1684
+It has been well-developed in between 1674--1684
 by Issac Newton's fundamental works, nowadays known as foundation of classical interpolation
 theory~\cite{meijering2002chronology}.
 
-At that time, in 2016, I was a first-year mechanical engineering undergraduate,
-so that due to lack of knowledge and perspective of view I started re-inventing interpolation
+At that time, in 2016, I was a first-year mechanical engineering undergraduate.
+Therefore, due to lack of knowledge in mathematics, I started re-inventing interpolation
 formula myself, fueled by purest passion and feeling of mystery.
-All mathematical laws and relations exist from the very beginning, but we only reveal and describe them, I thought.
-That mindset truly inspired me so that my own mathematical journey has been started.
-Let us begin considering the table of finite differences of the polynomial $n^3$
+\textit{All mathematical laws and relations exist from the very beginning, but we only reveal and describe them}, I thought.
+That mindset truly inspired me so that my own mathematical journey began.
+
+Let's start considering the table of finite differences of the polynomial $n^3$
 \input{sections/figures/01_fig_finite_differences_cubes}
 First and foremost, we can observe that finite difference $\Delta(n^3)$ of the polynomial $n^3$
 can be expressed through summation over $n$, e.g
@@ -49,14 +50,13 @@ Then our relation~\eqref{eq:general-cube-eq} immediately turns into Binomial exp
 However, as was said, I was not the experienced one mathematician back then,
 so that I reviewed the relation~\eqref{eq:general-cube-eq} from a little bit different perspective.
 Not following the convenient solution~\eqref{eq:cubes-difference-binomial-theorem},
-I have rearranged the first order finite differences from the table~\eqref{tab:table} using~\eqref{eq:cubes_interpolation}
-to get the polynomial $n^3$
+I have introduced the explicit formula for cubes, using~\eqref{eq:cubes_interpolation}
 \begin{align}
     \label{eq:rearrangement_to_get_cubes}
     n^3 &= [1+6\cdot0]+[1+6\cdot0+6\cdot1]+[1+6\cdot0+6\cdot1+6\cdot2]+\cdots \nonumber \\
     &+[1+6\cdot0+6\cdot1+6\cdot2+\cdots+6\cdot(n-1)]
 \end{align}
-Then, rearranging the terms of the equation~\eqref{eq:rearrangement_to_get_cubes} so that it turns into summation
+Then, rearranging the terms in equation~\eqref{eq:rearrangement_to_get_cubes} so that it turns into summation
 in terms of $k (n-k)$
 \begin{equation*}
     \begin{split}
@@ -64,10 +64,10 @@ in terms of $k (n-k)$
         &\cdots + [(n-k)\cdot 6 \cdot k] + \cdots + [1\cdot6\cdot(n-1)]
     \end{split}
 \end{equation*}
-Gives the interpolation of the polynomial $n^3$
+By applying compact sigma notation and moving $n$ under summation because there is exactly $n$ iteration, yields
 \begin{equation}
     \label{eq:cube_identity}
-    n^3 = \sum_{k=1}^{n} 6k(n-k) + 1
+    n^3 = n + \sum_{k=1}^{n} 6k(n-k); \quad \quad n^3 = \sum_{k=1}^{n} 6k(n-k) + 1
 \end{equation}
 \input{sections/figures/02_fig_triangle_row_sums_give_cubes}
 Therefore, we have reached our base case by successfully interpolating the polynomial $n^3$.
@@ -77,13 +77,12 @@ Fairly enough that the next curiosity would be
     then is it true that~\eqref{eq:cube_identity} can be generalized for higher powers, e.g.\ for $n^4$ or $n^5$ similarly?
     \label{question:higher_powers}
 \end{question}
-That was the next question, however without any expectation of the final form of generalized relation.
-Going a little further, the answer to this question is also \textit{Yes}, by utilizing certain approaches
-in terms of recurrence relations and systems of linear equations.
-Let us begin with the background and history review of systems of linear equations approach.
+That was the next question, however without any expectation of the final form of generalized formula.
+Long story short, the answer to this question is also \textit{Yes}, by utilizing certain approaches
+in terms of systems of linear equations or recurrence formula, which is discussed.
 
+Let us begin from the background and history overview of systems of linear equations approach.
 \input{sections/subsections/01_system_of_linear_equations_approach}
-
 However, constructing and solving a system of linear equations for every odd-power $2m+1$ requires a huge effort
 \begin{assumption}
     There must be a formula that generates a set of real coefficients $\coeffA{m}{0},\coeffA{m}{0}, \dots \coeffA{m}{m}$
@@ -99,12 +98,12 @@ I thought.
 Finally, we got our road to definition of $2m+1$-degree polynomial $\polynomialP{m}{b}{x}$.
 Introducing the parameter $b$ to the upper summation bound of the equation~\eqref{eq:odd-power-theorem},
 we have the definition
-\begin{defn} (Polynomial $\polynomialP{m}{b}{x} $of degree $2m+1$.)
+\begin{definition} (Polynomial $\polynomialP{m}{b}{x} $of degree $2m+1$.)
     \begin{equation}
         \polynomialP{m}{b}{x} = \sum_{k=0}^{b-1} \sum_{r=0}^{m} \coeffA{m}{r} k^r(x-k)^r
         \label{eq:definition_polynomial_p}
     \end{equation}
-\end{defn}
+\end{definition}
 where $\coeffA{m}{r}$ are real coefficients~\eqref{eq:definition_coefficient_a}.
 A comprehensive discussion on the polynomial $\polynomialP{m}{b}{x}$ as well as its properties can be found at~\cite{on_the_link_between_binomial_theorem_and_discrete_convolution}.
 For example,
