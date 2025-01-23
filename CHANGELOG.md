@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning v2.0.0](https://semver.org/spec
 - Update explanations about coefficients A
 - Equation numbers integers
 - Update other explanations
+- Fix environments
 
 ## [1.2.5] - 2025-01-14
 
