@@ -1,4 +1,15 @@
 Table[BrackCoefficient[2, 1, k], {k, 0, 10}]: https://oeis.org/A083420
+BrackCoefficient(a, b, c) = Sum_{r=0..c} A302971(c,r) / A304042(c, r) * b^r * (a-b)^r
+Let t(a, b, c) = Sum_{r=0..c} A302971(c,r) / A304042(c,r) * b^r * (a-b)^r then
+t(2, 1, n) = A083420(n)
+t(3, 1, n) = A096053(n)
+t(n, 1, 2) = A158558(n)
+Sum_{k=0..n} t(2, 1, k) = A144414(n)
+Sum_{k=0..n} t(3, 2, k) = A004004(n)
+
+Cf. A083420, A096053, A158558, A144414, A004004
+
+
 Table[BrackCoefficient[3, 1, k], {k, 0, 20}]: https://oeis.org/A096053
 Table[BrackCoefficient[4, k, 1], {k, 0, 20}]: Gives n-th rows of https://oeis.org/A287326
 Table[BrackCoefficient[k, 2, 1], {k, 0, 20}]: Gives n-th column of https://oeis.org/A287326
