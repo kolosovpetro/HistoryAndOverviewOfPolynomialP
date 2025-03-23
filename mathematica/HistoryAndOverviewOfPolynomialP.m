@@ -11,6 +11,8 @@ P::usage= "P[m, x, b] returns the polynomial P of m, x and b. See https://koloso
 BrackCoefficient::usage= "Returns brack coefficient in n,k,m integers."
 BraceCoefficient::usage= "Returns brac coefficient in n,k,m integers."
 BraceCoefficient1::usage= "Returns brac coefficient in n,k,m integers."
+ConvolutionOfBinomial::usage = "Returns an identity (x-2a)^{2m+1} + 1."
+ConvolutionOfBinomial1::usage = "Returns an identity (x-2a)^{2m+1} - 1."
 
 sigma::usage= "Forward jump operator on time scales."
 
@@ -56,6 +58,9 @@ theorem[m_] := Expand[timeScaleDerivativeX[m, Global`x, sigma[Global`x]] + timeS
 BrackCoefficient[n_, k_, m_]:=Sum[A[m, r]*k^r*(n-k)^r, {r, 0, m}];
 BraceCoefficient[n_, r_, m_]:=Sum[A[m, r]*k^r*(n-k)^r, {k, 0, n-1}];
 BraceCoefficient1[n_, r_, m_]:=Sum[A[m, r]*k^r*(n-k)^r, {k, 1, n}];
+
+ConvolutionOfBinomial[x_, a_, m_] := Sum[A[m, r]* Sum[(k - a)^r * (x - a - k)^r, {k, a, x - a}], {r, 0, m}];
+ConvolutionOfBinomial1[x_, a_, m_] := Sum[Sum[A[m, r] * (k - a)^r * (x - a - k)^r, {r, 0, m}], {k, a+1, x - a-1}];
 
 End[ ]
 

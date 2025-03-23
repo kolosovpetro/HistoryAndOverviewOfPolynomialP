@@ -1,0 +1,4 @@
+================ Triangles =================
+Column[Table[Coefficient[Expand[BrackCoefficient[n, k, s]], k, r] /. n -> 1, {s, 0, 8},  {r, 2*s, 0, -1}]]
+Column[Table[BraceCoefficient[n, k, n], {n, 0, 10}, {k, 0, n}]]
+Column[Table[BrackCoefficient[t - k, 2, k], {t, 0, 10}, {k, 0, t}]]
