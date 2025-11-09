@@ -1,5 +1,8 @@
 ## History and overview of the polynomial $\mathbf{P}^m_b(x)$
 
+> ⚠️ **Warning**
+> Archived in favour to [Unexpected polynomial identities arising from a classical interpolation problem](https://github.com/kolosovpetro/unexpected-polynomial-identities-classical-interpolation)
+
 ### Abstract
 
 The polynomial $\mathbf{P}^m_b(x)$ is a polynomial of degree $2m+1$ in $(x,b) \in \mathbb{R}$,
